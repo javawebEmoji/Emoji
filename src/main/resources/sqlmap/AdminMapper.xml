@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Emoji.dao.AdminMapper" >
+  <resultMap id="BaseResultMap" type="com.Emoji.entity.Admin" >
+    <id column="admin_name" property="admin_name" jdbcType="VARCHAR" />
+    <result column="admin_password" property="admin_password" jdbcType="VARCHAR" />
+    <result column="admin_account" property="admin_account" jdbcType="VARCHAR" />
+    <result column="admin_phone" property="admin_phone" jdbcType="VARCHAR" />
+    <result column="modifyadmin" property="modifyadmin" jdbcType="VARCHAR" />
+    <result column="modifytime" property="modifytime" jdbcType="TIME" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    admin_name, admin_password, admin_account, admin_phone, modifyadmin, modifytime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from admin
+    where admin_name = #{admin_name,jdbcType=VARCHAR}
+  </select>
+  <select id="login" resultType="BaseResultMap" parameterType="com.Emoji.entity.Admin">
+    select *
+    from admin
+    where admin_account = #{admin_account}
+    and admin_password = #{admin_password}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from admin
+    where admin_name = #{admin_name,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.Emoji.entity.Admin" >
+    insert into admin (admin_name, admin_password, admin_account, 
+      admin_phone, modifyadmin, modifytime
+      )
+    values (#{admin_name,jdbcType=VARCHAR}, #{admin_password,jdbcType=VARCHAR}, #{admin_account,jdbcType=VARCHAR}, 
+      #{admin_phone,jdbcType=VARCHAR}, #{modifyadmin,jdbcType=VARCHAR}, #{modifytime,jdbcType=TIME}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.Emoji.entity.Admin" >
+    insert into admin
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="admin_name != null" >
+        admin_name,
+      </if>
+      <if test="admin_password != null" >
+        admin_password,
+      </if>
+      <if test="admin_account != null" >
+        admin_account,
+      </if>
+      <if test="admin_phone != null" >
+        admin_phone,
+      </if>
+      <if test="modifyadmin != null" >
+        modifyadmin,
+      </if>
+      <if test="modifytime != null" >
+        modifytime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="admin_name != null" >
+        #{admin_name,jdbcType=VARCHAR},
+      </if>
+      <if test="admin_password != null" >
+        #{admin_password,jdbcType=VARCHAR},
+      </if>
+      <if test="admin_account != null" >
+        #{admin_account,jdbcType=VARCHAR},
+      </if>
+      <if test="admin_phone != null" >
+        #{admin_phone,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyadmin != null" >
+        #{modifyadmin,jdbcType=VARCHAR},
+      </if>
+      <if test="modifytime != null" >
+        #{modifytime,jdbcType=TIME},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.Emoji.entity.Admin" >
+    update admin
+    <set >
+      <if test="admin_password != null" >
+        admin_password = #{admin_password,jdbcType=VARCHAR},
+      </if>
+      <if test="admin_account != null" >
+        admin_account = #{admin_account,jdbcType=VARCHAR},
+      </if>
+      <if test="admin_phone != null" >
+        admin_phone = #{admin_phone,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyadmin != null" >
+        modifyadmin = #{modifyadmin,jdbcType=VARCHAR},
+      </if>
+      <if test="modifytime != null" >
+        modifytime = #{modifytime,jdbcType=TIME},
+      </if>
+    </set>
+    where admin_name = #{admin_name,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.Emoji.entity.Admin" >
+    update admin
+    set admin_password = #{admin_password,jdbcType=VARCHAR},
+      admin_account = #{admin_account,jdbcType=VARCHAR},
+      admin_phone = #{admin_phone,jdbcType=VARCHAR},
+      modifyadmin = #{modifyadmin,jdbcType=VARCHAR},
+      modifytime = #{modifytime,jdbcType=TIME}
+    where admin_name = #{admin_name,jdbcType=VARCHAR}
+  </update>
+</mapper>

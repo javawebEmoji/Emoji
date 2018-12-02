@@ -1,0 +1,255 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Lenovo
+  Date: 2018/11/25
+  Time: 19:47
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/flash.js"></script>
+    <script type="text/javascript" src="js/show.js"></script>
+    <script type="text/javascript" src="js/drawer.js"></script>
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="css/tail.css">
+    <link rel="stylesheet" href="css/next.css">
+    <style>
+        .main {
+            height: auto;
+            width: auto;
+            margin-top: 60px;
+            margin-left: 15.25%;
+            margin-right: 15.25%;
+            overflow: hidden;
+            background: white;
+        }
+
+        .photo {
+            overflow: hidden;
+            height: auto;
+            width: auto;
+        }
+        .photo img {
+            overflow: hidden;
+            height:160px;
+            width: 160px;
+            margin: 2px;
+
+        }
+        /* .photodiv {
+            height:0;
+            width: 15.68%;
+            margin: 2px;
+            padding: 15.68% 0 0;
+            white-space: nowrap;
+            display: inline-block;
+        }
+        .photodiv img{
+            height: auto;
+            width: 100%;
+        } */
+    </style>
+</head>
+
+<body>
+<div class="top">
+
+    <ul>
+        <li>
+            <a href="index.html" style="background: url(../../picture/logo.png) no-repeat 33%,5%;background-size: 100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li>
+            <a href="index.html">最新套图</a>
+        </li>
+        <li>
+            <a href="thelatest.html">最新表情</a>
+        </li>
+        <li>
+            <a href="search.html">表情搜索</a>
+        </li>
+        <li>
+            <a href="http://www.doutula.com/maker">
+                <b>表情制作</b>
+            </a>
+        </li>
+        <li>
+            <a href="contribute.html">表情投稿</a>
+        </li>
+        <li>
+            <a href="#contact">联系我们</a>
+            <ul>
+                <li>
+                    <a href="#contact">合作相关</a>
+                </li>
+                <li>
+                    <a href="#contact">意见反馈</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="top2">
+    <a href="index.html" style="background: url(../../picture/logo.png) no-repeat 33%,5%;background-size: 100% 100%;float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <img id="ico" src="../../picture/drawer.png" alt="">
+</div>
+<div class="drawer">
+    <ul>
+        <li>
+            <a href="index.html">最新套图</a>
+        </li>
+        <li>
+            <a href="thelatest.html">最新表情</a>
+        </li>
+        <li>
+            <a href="search.html">表情搜索</a>
+        </li>
+        <li>
+            <a href="http://www.doutula.com/maker">
+                <b>表情制作</b>
+            </a>
+        </li>
+        <li>
+            <a href="contribute.html">表情投稿</a>
+        </li>
+    </ul>
+</div>
+<!-- <div class="main">
+    <span style="float: left;">
+        <b>特大号厨具</b>
+    </span>
+    <span style="float: right;color:grey;">2018/9/16</span>
+    <br>
+    <br>
+    <hr>
+    <div class="photo">
+        <div class="photodiv"><img src="picture/set/cooker/1.jpg"></div>
+        <div class="photodiv"><img src="picture/set/cooker/2.jpg"></div>
+        <div class="photodiv"><img src="picture/set/cooker/3.jpg"></div>
+        <div class="photodiv"><img src="picture/set/cooker/4.jpg"></div>
+        <div class="photodiv"><img src="picture/set/cooker/5.jpg"></div>
+        <div class="photodiv"><img src="picture/set/cooker/6.jpg"></div>
+
+    </div>
+    <hr>
+</div> -->
+<div class="main">
+        <span style="float: left;">
+            <b>特大号厨具</b>
+        </span>
+    <span style="float: right;color:grey;">2018/9/16</span>
+    <br>
+    <br>
+    <hr>
+    <div class="photo">
+        <img src="picture/set/cooker/1.jpg">
+        <img src="picture/set/cooker/2.jpg">
+        <img src="picture/set/cooker/3.jpg">
+        <img src="picture/set/cooker/4.jpg">
+        <img src="picture/set/cooker/5.jpg">
+        <img src="picture/set/cooker/6.jpg">
+
+    </div>
+    <hr>
+</div>
+<div class="main">
+        <span style="float: left;">
+            <b>小青龙</b>
+        </span>
+    <span style="float: right;color:grey;">2018/9/16</span>
+    <br>
+    <br>
+    <hr>
+    <div class="photo">
+        <img src="picture/set/dragon/1.gif">
+        <img src="picture/set/dragon/2.gif">
+        <img src="picture/set/dragon/3.gif">
+        <img src="picture/set/dragon/4.gif">
+        <img src="picture/set/dragon/5.gif">
+        <img src="picture/set/dragon/6.gif">
+    </div>
+    <hr>
+</div>
+<div class="main">
+        <span style="float: left;">
+            <b>狐狸跳舞</b>
+        </span>
+    <span style="float: right;color:grey;">2018/9/16</span>
+    <br>
+    <br>
+    <hr>
+    <div class="photo">
+        <img src="picture/set/fox/1.gif">
+        <img src="picture/set/fox/2.gif">
+        <img src="picture/set/fox/3.gif">
+        <img src="picture/set/fox/4.gif">
+        <img src="picture/set/fox/5.gif">
+        <img src="picture/set/fox/6.gif">
+    </div>
+    <hr>
+</div>
+<div class="main">
+        <span style="float: left;">
+            <b>小黄鸭</b>
+        </span>
+    <span style="float: right;color:grey;">2018/9/16</span>
+    <br>
+    <br>
+    <hr>
+    <div class="photo">
+        <img src="picture/set/duck/1.jpg">
+        <img src="picture/set/duck/2.jpg">
+        <img src="picture/set/duck/3.jpg">
+        <img src="picture/set/duck/4.jpg">
+        <img src="picture/set/duck/5.jpg">
+        <img src="picture/set/duck/6.jpg">
+    </div>
+    <hr>
+</div>
+<div class="main">
+        <span style="float: left;">
+            <b>国庆节</b>
+        </span>
+    <span style="float: right;color:grey;">2018/9/16</span>
+    <br>
+    <br>
+    <hr>
+    <div class="photo">
+        <img src="picture/set/panda/1.jpg">
+        <img src="picture/set/panda/2.jpg">
+        <img src="picture/set/panda/3.jpg">
+        <img src="picture/set/panda/4.jpg">
+        <img src="picture/set/panda/5.jpg">
+        <img src="picture/set/panda/6.jpg">
+    </div>
+    <hr>
+</div>
+<br><br>
+<div class="next">
+    <a href="#"><</a>
+    <a href="#" style="background: black; color: white;">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    &nbsp;&nbsp;...
+    <a href="#" style="float: right;">></a>
+    <a href="#" style="float: right;">10</a>
+</div>
+<div class="tail">
+    <hr>
+    <div>
+        <img src="../../picture/logo.png" alt="logo">
+    </div>
+    <div style="width: 30%;">
+        <p>版权声明</p>
+        <p>本站资源均收集整理于互联网，如果有侵犯您权利的资源，请来信告知，我们将尽快作出处理。</p>
+    </div>
+    <hr>
+</div>
+</body>
+</html
