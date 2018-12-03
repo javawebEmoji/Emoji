@@ -62,4 +62,16 @@ public class Admin {
     public void setModifytime(Date modifytime) {
         this.modifytime = modifytime;
     }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "admin_name='" + admin_name + '\'' +
+                ", admin_password='" + admin_password + '\'' +
+                ", admin_account='" + admin_account + '\'' +
+                ", admin_phone='" + admin_phone + '\'' +
+                ", modifyadmin='" + modifyadmin + '\'' +
+                ", modifytime=" + modifytime +
+                '}';
+    }
 }

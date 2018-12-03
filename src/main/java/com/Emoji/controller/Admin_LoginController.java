@@ -1,5 +1,8 @@
-package com.Emoji.admin.controller;
+package com.Emoji.controller;
 
+import com.Emoji.entity.Admin;
+import com.Emoji.service.AdminService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,11 +14,24 @@ import java.util.Map;
 
 
 @Controller
-public class LoginController {
+public class Admin_LoginController {
     @RequestMapping({"/admin","/admin/login"})
     public String test(){
         return "admin/login";
 
+    }
+    @Autowired
+    private AdminService adminService;
+    @RequestMapping("/admin/loginTest")
+    public String logintest(@RequestParam("admin_username")String admin_username,
+                            @RequestParam("admin_password")String admin_password ){
+        System.out.println(admin_username+" "+admin_password);
+        Admin admin = new Admin();
+        admin.setAdmin_name(admin_username);
+        admin.setAdmin_name(admin_password);
+        Admin admin1=adminService.login(admin);
+        if (admin!=null) return "/admin/home";
+        else return "/admin";
     }
 
     @ResponseBody  // 异步请求的响应结果

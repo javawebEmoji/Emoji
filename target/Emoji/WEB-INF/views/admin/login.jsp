@@ -6,7 +6,7 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>表情包后台管理</title>
-
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 	<style>
 		*{
 			margin: 0px;
@@ -114,10 +114,10 @@
 		<h1>欢迎登录表情包后台管理系统</h1>
 	</div>
 	<div class="login-body">
-		<form name="form-login" onsubmit="return validateForm()">
-			<input name="admin_username" class="input" type="text" placeholder="请输入账号">
-			<input name="password" class="input" type="password" placeholder="请输入密码">
-			<input class="submit" type="submit" value="登录" hidefocus="true" style="cursor: pointer">
+		<form id="loginForm" action="/admin/loginTest">
+			<input id="admin_username" name="admin_username" class="input" type="text" placeholder="请输入账号">
+			<input id="admin_password" name="admin_password" class="input" type="password" placeholder="请输入密码">
+			<input id="login" class="submit" type="button" value="登录" hidefocus="true" style="cursor: pointer">
 		</form>
 	</div>
 </div>

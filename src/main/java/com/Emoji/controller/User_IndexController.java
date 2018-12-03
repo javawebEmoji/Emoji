@@ -1,13 +1,14 @@
-package com.Emoji.admin.controller;
+package com.Emoji.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class UserController {
-    @RequestMapping("/admin/user")
+public class User_IndexController {
+    @RequestMapping({"/","/index"})
     public String test(){
-        return "admin/user";
+        return "index";
 
     }
 }
+

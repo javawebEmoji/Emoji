@@ -90,6 +90,25 @@
                 </li>
             </ul>
         </li>
+        <%
+            session = request.getSession();
+            if (session.getAttribute("isLogin")==null){
+                session.setAttribute("isLogin",false);
+            }
+            if ((boolean) session.getAttribute("isLogin")==false){
+                out.print("<li style=\"float: right;;\">\n" +
+                        "<a href=\"login\">登录</a>\n" +
+                        "</li>\n" +
+                        "<li style=\"float: right;\">\n" +
+                        "<a href=\"login.html\">注册</a>\n" +
+                        "</li>");
+            }
+            else if ((boolean) session.getAttribute("isLogin")==true){
+                out.print("<li style=\"float: right;;\">\n" +
+                        "<a href=\"login.html\">个人中心</a>\n" +
+                        "</li>");
+            }
+        %>
     </ul>
 </div>
 <div class="top2">
@@ -115,6 +134,21 @@
         <li>
             <a href="contribute.html">表情投稿</a>
         </li>
+        <%
+            if ((boolean) session.getAttribute("isLogin")==false){
+                out.print("<li style=\"float: right;;\">\n" +
+                        "<a href=\"login.html\">登录</a>\n" +
+                        "</li>\n" +
+                        "<li style=\"float: right;\">\n" +
+                        "<a href=\"login.html\">注册</a>\n" +
+                        "</li>");
+            }
+            else if ((boolean) session.getAttribute("isLogin")==true){
+                out.print("<li style=\"float: right;;\">\n" +
+                        "<a href=\"login.html\">个人中心</a>\n" +
+                        "</li>");
+            }
+        %>
     </ul>
 </div>
 <!-- <div class="main">

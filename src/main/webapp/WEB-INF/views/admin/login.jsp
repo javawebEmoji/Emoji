@@ -104,78 +104,6 @@
 			margin: 100px auto 0px auto;
 		}
 	</style>
-	<script type="text/javascript">
-        $(function(){
-            // 等文档加载完成以后再执行本脚本
-            // 给验证码绑定点击事件
-            // vimg
-            <%--$("#vimg").click(function(){--%>
-            <%--$(this).attr("src","${ctx}/createCode?timer="+new Date().getTime());--%>
-            <%--}).mouseover(function(){--%>
-            <%--$(this).css("cursor","pointer");--%>
-            <%--});--%>
-
-            /** 回车键事件
-             event :事件源,代表按下的那个按键
-             */
-            $(document).keydown(function(event){
-                if(event.keyCode == 13){
-                    $("#login").trigger("click");
-                }
-            });
-
-            /** 1.异步登录功能  */
-            $("#login").bind("click",function(){
-                var username = $("#admin_username").val();
-                var password = $("#admin_password").val();
-                // var vcode = $("#vcode").val();
-
-                // 定义一个校验结果
-                var msg = "";
-                if(!/^\w{2,20}$/.test(username.trim())){
-                    msg = "登录名必须是2-20个的字符";
-                }else if(!/^\w{6,20}$/.test(password)){
-                    msg = "密码必须是6-20个的字符";
-                }
-                // else if(!/^\w{4}$/.test(vcode)){
-                //     msg = "验证码格式不正确";
-                // }
-
-                if(msg!=""){
-                    // 校验失败了
-                    $.messager.alert("登录提示","<span style='color:red;'>"+msg+"</span>","error");
-                    return ; // 结束程序
-                }
-
-                var params = $("#loginForm").serialize();
-
-                /** 发起异步请求登录 */
-                $.ajax({
-                    url:"loginAjax",
-                    type: "post",
-                    dataType : "json",
-                    data : params ,
-                    async : true ,  // 是异步还是异步中的同步
-                    success : function(data){
-                        if(data.status == 1){
-                            /** 跳转到主界面上去  */
-                            window.location = "home";
-                        }else{
-                            $("#vimg").trigger("click");
-                            $.messager.alert("登录提示","<span style='color:red;'>"+data.tip+"</span>","error");
-                        }
-
-                    },error : function(){
-                        $.messager.alert("登录提示","<span style='color:red;'>您登陆失败了</span>","error");
-                    }
-                })
-
-            })
-
-
-        })
-
-	</script>
 </head>
 <body>
 <div id="head">
@@ -186,7 +114,7 @@
 		<h1>欢迎登录表情包后台管理系统</h1>
 	</div>
 	<div class="login-body">
-		<form id="loginForm">
+		<form id="loginForm" action="/admin/loginTest">
 			<input id="admin_username" name="admin_username" class="input" type="text" placeholder="请输入账号">
 			<input id="admin_password" name="admin_password" class="input" type="password" placeholder="请输入密码">
 			<input id="login" class="submit" type="button" value="登录" hidefocus="true" style="cursor: pointer">

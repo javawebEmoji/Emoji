@@ -3,10 +3,11 @@ package com.Emoji.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
-public class SearchController {
-    @RequestMapping("/search")
+public class User_ThelatestController {
+    @RequestMapping("/thelatest")
     public String test(){
-        return "search";
+        return "thelatest";
     }
 }
