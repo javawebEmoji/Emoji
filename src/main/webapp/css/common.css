@@ -1,4 +1,3 @@
-/*需要技术支持联系QQ：44312658*/
 header{
 	width: 100%;
 	height: 50px;
@@ -93,9 +92,9 @@ header{
 
 .logo{
 	width: 500px;
-	height: 150px;
+	height: 100px;
 	margin: 0px auto;
-	background: no-repeat center;
+	background: url(../picture/logo.png) no-repeat center;
 }
 .login_box{
 	width: 360px;
@@ -157,13 +156,13 @@ header{
 	height: 40px;
 	margin:  10px auto;
 }
-.form_btn button{
+.form_btn input{
 	width: 100%;
 	height: 100%;
 	border: none;
 	color: #FFFFFF;
 	font-size: 14px;
-	background: #FF7F50;
+	background: #0f0f0f;
 	cursor: pointer;
 }
 .form_reg_btn{

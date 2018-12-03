@@ -100,7 +100,7 @@
                         "<a href=\"login\">登录</a>\n" +
                         "</li>\n" +
                         "<li style=\"float: right;\">\n" +
-                        "<a href=\"login.html\">注册</a>\n" +
+                        "<a href=\"register\">注册</a>\n" +
                         "</li>");
             }
             else if ((boolean) session.getAttribute("isLogin")==true){
@@ -137,10 +137,10 @@
         <%
             if ((boolean) session.getAttribute("isLogin")==false){
                 out.print("<li style=\"float: right;;\">\n" +
-                        "<a href=\"login.html\">登录</a>\n" +
+                        "<a href=\"login\">登录</a>\n" +
                         "</li>\n" +
                         "<li style=\"float: right;\">\n" +
-                        "<a href=\"login.html\">注册</a>\n" +
+                        "<a href=\"register\">注册</a>\n" +
                         "</li>");
             }
             else if ((boolean) session.getAttribute("isLogin")==true){
@@ -286,4 +286,4 @@
     <hr>
 </div>
 </body>
-</html
+</html>
