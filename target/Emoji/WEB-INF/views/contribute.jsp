@@ -193,12 +193,13 @@
         </div>
 
         <div class="picture">
-                <span id="img_span"3>
+                <span id="img_span">
                     <input id="file" class="filepath" onchange="changepic(this)" type="file"><br>
                 </span>
         </div>
         <input type="submit" value="提交" id="submit">
     </form>
+   </div>
 
 </body>
 <script>

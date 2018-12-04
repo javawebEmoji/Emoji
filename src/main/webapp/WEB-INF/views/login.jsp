@@ -15,13 +15,15 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
 </head>
 <body>
- <% session = request.getSession();
+ <%  session = request.getSession();
      if (session.getAttribute("isLogin")==null){
          session.setAttribute("isLogin",false);
      }
-     System.out.println("request.getAttribute(\"LoginResult\") ："+request.getAttribute("LoginResult"));
-     if ((int)request.getAttribute("LoginResult")==1){
-         session.setAttribute("isLogin",true);
+     System.out.println("request.getAttribute(\"LoginResult\") :"+request.getAttribute("LoginResult"));
+     if (request.getAttribute("LoginResult")!=null) {
+         if ((int) request.getAttribute("LoginResult") == 1) {
+             session.setAttribute("isLogin", true);
+         }
      }
  %>
 <div class="wrap login_wrap">
