@@ -1,111 +1,204 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.Emoji.dao.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.Emoji.entity.User" >
-    <id column="username" property="username" jdbcType="VARCHAR" />
-    <result column="password" property="password" jdbcType="VARCHAR" />
-    <result column="phone" property="phone" jdbcType="VARCHAR" />
-    <result column="question" property="question" jdbcType="VARCHAR" />
-    <result column="answer" property="answer" jdbcType="VARCHAR" />
-    <result column="email" property="email" jdbcType="VARCHAR" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Emoji.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.Emoji.entity.User">
+    <id column="userid" jdbcType="INTEGER" property="userid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="question" jdbcType="VARCHAR" property="question" />
+    <result column="answer" jdbcType="VARCHAR" property="answer" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="hobby" jdbcType="VARCHAR" property="hobby" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
   </resultMap>
-  <sql id="Base_Column_List" >
-    username, password, phone, question, answer, email
+  <sql id="Base_Column_List">
+    userid, username, password, phone, question, answer, email, birthday, hobby, sex, 
+    createtime
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
-    <include refid="Base_Column_List" />
-    from user
-    where username = #{username,jdbcType=VARCHAR}
-  </select>
   <select id="selectLogin" resultMap="BaseResultMap" parameterType="com.Emoji.entity.User">
     select *
     from user
     where username =#{username} and password =#{password}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
-    delete from user
-    where username = #{username,jdbcType=VARCHAR}
-  </delete>
-  <insert id="insert" parameterType="com.Emoji.entity.User" >
-    insert into user (username, password, phone, 
-      question, answer, email
-      )
-    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
-      #{question,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}
-      )
-  </insert>
-  <insert id="insertSelective" parameterType="com.Emoji.entity.User" >
-    insert into user
-    <trim prefix="(" suffix=")" suffixOverrides="," >
+  <select id="selectSelective" resultMap="BaseResultMap" parameterType="com.Emoji.entity.User">
+    select *
+    from user
+    <where>
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=VARCHAR}
+      </if>
       <if test="username != null" >
+        and username = #{username,jdbcType=VARCHAR}
+      </if>
+      <if test="password != null" >
+        and password = #{password,jdbcType=VARCHAR}
+      </if>
+      <if test="phone != null" >
+        and phone = #{phone,jdbcType=VARCHAR}
+      </if>
+      <if test="question != null" >
+        and question = #{question,jdbcType=VARCHAR}
+      </if>
+      <if test="answer != null" >
+        and answer = #{answer,jdbcType=VARCHAR}
+      </if>
+      <if test="email != null" >
+        and email = #{email,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where userid = #{userid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where userid = #{userid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.Emoji.entity.User">
+    insert into user (userid, username, password, 
+      phone, question, answer, 
+      email, birthday, hobby, 
+      sex, createtime)
+    values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{question,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{hobby,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.Emoji.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        userid,
+      </if>
+      <if test="username != null">
         username,
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         password,
       </if>
-      <if test="phone != null" >
+      <if test="phone != null">
         phone,
       </if>
-      <if test="question != null" >
+      <if test="question != null">
         question,
       </if>
-      <if test="answer != null" >
+      <if test="answer != null">
         answer,
       </if>
-      <if test="email != null" >
+      <if test="email != null">
         email,
       </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="hobby != null">
+        hobby,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="username != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
         #{username,jdbcType=VARCHAR},
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         #{password,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null" >
+      <if test="phone != null">
         #{phone,jdbcType=VARCHAR},
       </if>
-      <if test="question != null" >
+      <if test="question != null">
         #{question,jdbcType=VARCHAR},
       </if>
-      <if test="answer != null" >
+      <if test="answer != null">
         #{answer,jdbcType=VARCHAR},
       </if>
-      <if test="email != null" >
+      <if test="email != null">
         #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="hobby != null">
+        #{hobby,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.Emoji.entity.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.Emoji.entity.User">
     update user
-    <set >
-      <if test="password != null" >
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null" >
+      <if test="phone != null">
         phone = #{phone,jdbcType=VARCHAR},
       </if>
-      <if test="question != null" >
+      <if test="question != null">
         question = #{question,jdbcType=VARCHAR},
       </if>
-      <if test="answer != null" >
+      <if test="answer != null">
         answer = #{answer,jdbcType=VARCHAR},
       </if>
-      <if test="email != null" >
+      <if test="email != null">
         email = #{email,jdbcType=VARCHAR},
       </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="hobby != null">
+        hobby = #{hobby,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
     </set>
-    where username = #{username,jdbcType=VARCHAR}
+    where userid = #{userid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.Emoji.entity.User" >
+  <update id="updateByPrimaryKey" parameterType="com.Emoji.entity.User">
     update user
-    set password = #{password,jdbcType=VARCHAR},
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=VARCHAR},
       question = #{question,jdbcType=VARCHAR},
       answer = #{answer,jdbcType=VARCHAR},
-      email = #{email,jdbcType=VARCHAR}
-    where username = #{username,jdbcType=VARCHAR}
+      email = #{email,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=DATE},
+      hobby = #{hobby,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      createtime = #{createtime,jdbcType=TIMESTAMP}
+    where userid = #{userid,jdbcType=INTEGER}
   </update>
+    <update id="findkey" parameterType="com.Emoji.entity.User">
+        update user
+        set password = #{password,jdbcType=VARCHAR}
+        where
+        phone = #{phone,jdbcType=VARCHAR}
+        and question = #{question,jdbcType=VARCHAR}
+        and answer = #{answer,jdbcType=VARCHAR}
+    </update>
 </mapper>

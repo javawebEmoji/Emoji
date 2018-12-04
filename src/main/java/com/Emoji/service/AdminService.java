@@ -9,7 +9,5 @@ import org.springframework.stereotype.Service;
 public class AdminService {
     @Autowired
     AdminMapper adminMapper;
-    public Admin login(Admin record){
-      return adminMapper.login(record);
-    }
+
 }

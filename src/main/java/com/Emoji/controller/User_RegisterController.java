@@ -20,12 +20,9 @@ public class User_RegisterController {
     @RequestMapping(value = "/registerTest",method = RequestMethod.POST)
     public String registerTest(@ModelAttribute User user,Model model){
         System.out.println(user);
-        int i = userService.insertSelective(user);
+        int i = userService.registerTest(user);
         System.out.println(i);
-        if (i==1){
-            model.addAttribute("registerResult",1);
-        }
-        else model.addAttribute("registerResult",0);
+        model.addAttribute("registerResult",i);
         return "register";
     }
 }

@@ -27,12 +27,28 @@ public class User_LoginController {
         }
         if (result!=null){
             model.addAttribute("LoginResult",1);//登录成功
+            model.addAttribute("userid",result.getUserid());//返回登录用户id
         }
         else
             model.addAttribute("LoginResult",0);//登录失败
-
         return  "login";
-
+    }
+    @RequestMapping("/loginOff")
+    public String loginOff(Model model){
+        model.addAttribute("LoginResult",2);
+        return "index";
+    }
+    @RequestMapping("/findkey")
+    public String findkeyGet(){
+        return "findkey";
+    }
+    @RequestMapping(value = "/findkey",method = RequestMethod.POST)
+    public String findkeyPost(@ModelAttribute User user,Model model){
+        System.out.println(user);
+        int i= userService.findkey(user);
+        System.out.println(i);
+        model.addAttribute("findKeyResult",i);
+        return "findkey";
     }
 
 }

@@ -34,9 +34,9 @@
                     </div>
                     <div class="ececk_warning"><span>手机号不能为空</span></div>
                     <div class="form_text_ipt">
-                        <input name="username" type="text" placeholder="昵称">
+                        <input name="username" type="text" placeholder="用户名(用于登录）">
                     </div>
-                    <div class="ececk_warning"><span>昵称不能为空</span></div>
+                    <div class="ececk_warning"><span>用户名不能为空</span></div>
                     <div class="form_text_ipt">
                         <input name="password" type="password" placeholder="密码">
                     </div>
@@ -94,7 +94,7 @@
             return false;
         }
         else if(nickname.trim()==""){
-            alert("昵称不能为空");
+            alert("用户名不能为空");
             document.zhuce.username.focus();
             return false;
         }
@@ -121,9 +121,15 @@
     if('${registerResult}'!=''){
         if('${registerResult}'==0)
             alert("注册失败！");
-        if('${registerResult}'==1)
+        if('${registerResult}'==1){
             alert("注册成功，点击跳转到登录界面");
             window.location.href="login";
+        }
+        if('${registerResult}'==2)
+            alert("该手机号已经被注册！");
+        if('${registerResult}'==3)
+            alert("该用户名已经被注册");
+
     }
 </script>
 </html>

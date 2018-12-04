@@ -29,7 +29,6 @@ public class Admin_LoginController {
         Admin admin = new Admin();
         admin.setAdmin_name(admin_username);
         admin.setAdmin_name(admin_password);
-        Admin admin1=adminService.login(admin);
         if (admin!=null) return "/admin/home";
         else return "/admin";
     }

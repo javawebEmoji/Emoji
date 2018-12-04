@@ -23,6 +23,7 @@
      if (request.getAttribute("LoginResult")!=null) {
          if ((int) request.getAttribute("LoginResult") == 1) {
              session.setAttribute("isLogin", true);
+             session.setAttribute("userid",request.getAttribute("userid"));
          }
      }
  %>
@@ -34,8 +35,7 @@
                 <div class="login_title">
                     登录
                 </div>
-                <form action="LoginTest" method="post" onsubmit=" return LoginCheck()">
-
+                <form action="LoginTest" method="post" onsubmit="return LoginCheck()">
                     <div class="form_text_ipt">
                         <input name="username" id="username" type="text" placeholder="用户名">
                     </div>
@@ -49,7 +49,7 @@
                             <label><input name="autoLogin" type="checkbox"> 下次自动登录</label>
                         </div>
                         <div class="right check_right">
-                            <a href="findkey.html">忘记密码</a>
+                            <a href="findkey">忘记密码</a>
                         </div>
                     </div>
                     <div class="form_btn">

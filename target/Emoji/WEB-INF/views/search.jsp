@@ -124,7 +124,10 @@
                 }
                 else if ((boolean) session.getAttribute("isLogin")==true){
                     out.print("<li style=\"float: right;;\">\n" +
-                            "<a href=\"login\">个人中心</a>\n" +
+                            "<a href=\"loginOff\">退出登录</a>\n" +
+                            "</li>\n" +
+                            "<li style=\"float: right;\">\n" +
+                            "<a href=\"personal\">个人中心</a>\n" +
                             "</li>");
                 }
             %>
@@ -164,7 +167,10 @@
             }
             else if ((boolean) session.getAttribute("isLogin")==true){
                 out.print("<li style=\"float: right;;\">\n" +
-                        "<a href=\"login.html\">个人中心</a>\n" +
+                        "<a href=\"loginOff\">退出登录</a>\n" +
+                        "</li>\n" +
+                        "<li style=\"float: right;\">\n" +
+                        "<a href=\"personal\">个人中心</a>\n" +
                         "</li>");
             }
         %>

@@ -1,6 +1,10 @@
 package com.Emoji.entity;
 
+import java.util.Date;
+
 public class User {
+    private Integer userid;
+
     private String username;
 
     private String password;
@@ -12,6 +16,22 @@ public class User {
     private String answer;
 
     private String email;
+
+    private Date birthday;
+
+    private String hobby;
+
+    private String sex;
+
+    private Date createtime;
+
+    public Integer getUserid() {
+        return userid;
+    }
+
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
 
     public String getUsername() {
         return username;
@@ -61,15 +81,52 @@ public class User {
         this.email = email;
     }
 
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "username='" + username + '\'' +
+                "userid=" + userid +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
                 ", question='" + question + '\'' +
                 ", answer='" + answer + '\'' +
                 ", email='" + email + '\'' +
+                ", birthday=" + birthday +
+                ", hobby='" + hobby + '\'' +
+                ", sex='" + sex + '\'' +
+                ", createtime=" + createtime +
                 '}';
     }
 }
