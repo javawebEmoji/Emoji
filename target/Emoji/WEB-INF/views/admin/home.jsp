@@ -34,7 +34,8 @@
         }
     </style>
 </head>
-
+<%--防止强制跳转--%>
+<jsp:include page="checkLogin.jsp"></jsp:include>
 <body>
 <!-- 整体容器-->
 <div id="wrapper">

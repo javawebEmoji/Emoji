@@ -1,6 +1,7 @@
 package com.Emoji.dao;
 
 import com.Emoji.entity.Admin;
+import com.Emoji.entity.User;
 
 public interface AdminMapper {
     int deleteByPrimaryKey(String admin_name);
@@ -14,4 +15,7 @@ public interface AdminMapper {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+
+    Admin selectLogin(Admin record);
+    Admin getUserByAdmin_account(String admin_account);
 }

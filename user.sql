@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80013
 File Encoding         : 65001
 
-Date: 2018-12-03 23:16:48
+Date: 2018-12-04 19:48:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,18 +20,22 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
+  `userid` int(4) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
   `password` varchar(16) NOT NULL,
-  `phone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `phone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `question` varchar(50) NOT NULL,
   `answer` varchar(50) NOT NULL,
   `email` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `birthday` date DEFAULT NULL,
+  `hobby` varchar(50) DEFAULT NULL,
+  `sex` varchar(10) DEFAULT NULL,
+  `createtime` datetime DEFAULT NULL,
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('emoji', 'emoji', null, 'question', 'answer', null);
-INSERT INTO `user` VALUES ('manzuo', 'manzuo', null, 'nihao', 'helloworld', null);
-INSERT INTO `user` VALUES ('root', 'root', '12345678901', 'java', 'web', null);
+INSERT INTO `user` VALUES ('1', 'root', '123', '13777841582', 'java', 'web', null, null, null, null, null);
+INSERT INTO `user` VALUES ('6', 'root', '12', '13777841581', 'java', 'web', null, null, null, null, '2018-12-04 16:41:25');

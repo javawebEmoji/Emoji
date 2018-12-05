@@ -135,13 +135,13 @@
 
             /** 1.异步登录功能  */
             $("#login").bind("click",function(){
-                var username = $("#admin_username").val();
+                var account = $("#admin_account").val();
                 var password = $("#admin_password").val();
                 console.log(password);
                 // var vcode = $("#vcode").val();
                 // 定义一个校验结果
                 var msg = "";
-                if(!/^\w{2,20}$/.test(username.trim())){
+                if(!/^\w{2,20}$/.test(account.trim())){
                     msg = "登录名必须是2-20个的字符";
                 }else if(!/^\w{6,20}$/.test(password)){
                     msg = "密码必须是6-20个的字符";
@@ -171,7 +171,7 @@
                         console.log(data);
                         if(data.status == 1){
                             /** 跳转到主界面上去  */
-                            // window.location = "admin/home";
+                            window.location = "home";
                         }else{
                             $("#vimg").trigger("click");
                             $("#tip").css("background-color","#f8d7da")
@@ -204,7 +204,7 @@
 	<div class="login-body">
 		<div id="tip"></div>
 		<form id="loginForm" action="/admin/loginTest">
-			<input id="admin_username" name="admin_username" class="input" type="text" placeholder="请输入账号">
+			<input id="admin_account" name="admin_account" class="input" type="text" placeholder="请输入账号">
 			<input id="admin_password" name="admin_password" class="input" type="password" placeholder="请输入密码">
 			<input id="login" class="submit" type="button" value="登录" hidefocus="true" style="cursor: pointer">
 		</form>

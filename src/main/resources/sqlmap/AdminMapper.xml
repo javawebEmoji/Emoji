@@ -12,6 +12,17 @@
   <sql id="Base_Column_List">
     admin_name, admin_account, admin_password, admin_phone, modifyadmin, modifytime
   </sql>
+
+
+
+  <select id="getUserByAdmin_account" resultMap="BaseResultMap" parameterType="com.Emoji.entity.Admin">
+    select *
+    from admin
+    where admin_account =#{admin_account}
+  </select>
+
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
