@@ -34,11 +34,12 @@ public class Admin_LoginController {
     }
 
     @ResponseBody  // 异步请求的响应结果
-    @RequestMapping(value="/loginAjax",produces="application/json; charset=UTF-8")
+    @RequestMapping(value="/admin/loginAjax",produces="application/json; charset=UTF-8")
     public Map<String, Object> login(@RequestParam("admin_username")String admin_username,
                                      @RequestParam("admin_password")String admin_password
             ){
         try {
+            System.out.println(admin_username+" "+admin_password);
             Map<String, Object> params = new HashMap<>();
             params.put("admin_username", admin_username);
             params.put("admin_password", admin_password);

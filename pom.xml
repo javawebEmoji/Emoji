@@ -83,7 +83,6 @@
           <artifactId>c3p0</artifactId>
           <version> 0.9.5.2</version>
       </dependency>
-
       <!-- 数据库连接驱动包 -->
       <dependency>
           <groupId>mysql</groupId>
@@ -115,6 +114,13 @@
           <artifactId>cglib</artifactId>
           <version> 3.2.7</version>
       </dependency>
+      <!--json-->
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>2.9.5</version>
+      </dependency>
+
   </dependencies>
 
   <build>
