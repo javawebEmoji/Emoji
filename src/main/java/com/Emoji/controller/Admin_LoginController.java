@@ -17,8 +17,13 @@ import java.util.Map;
 
 @Controller
 public class Admin_LoginController {
-    @RequestMapping({"/admin","/admin/login"})
-    public String test(){
+    @RequestMapping("/admin")
+    public String tologin(){
+        return "redirect:admin/login";
+
+    }
+    @RequestMapping("/admin/login")
+    public String login(){
         return "admin/login";
 
     }
