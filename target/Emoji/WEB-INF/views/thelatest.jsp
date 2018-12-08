@@ -97,7 +97,7 @@
                             "<a href=\"loginOff\">退出登录</a>\n" +
                             "</li>\n" +
                             "<li style=\"float: right;\">\n" +
-                            "<a href=\"personal\">个人中心</a>\n" +
+                            "<a href=\"personalCenter\">个人中心</a>\n" +
                             "</li>");
                 }
             %>
@@ -140,7 +140,7 @@
                         "<a href=\"loginOff\">退出登录</a>\n" +
                         "</li>\n" +
                         "<li style=\"float: right;\">\n" +
-                        "<a href=\"personal\">个人中心</a>\n" +
+                        "<a href=\"personalCenter\">个人中心</a>\n" +
                         "</li>");
             }
         %>

@@ -39,7 +39,7 @@ public class UserService {
         return i;
 
     }
-    public int findkey(User user){
+    public int findkey(User user){ //找回密码
         User test = new User();
         test.setPhone(user.getPhone());
         ArrayList<User> result = selectSelective(test);
@@ -47,5 +47,21 @@ public class UserService {
             return  2;//该手机号码不存在
         return userMapper.findkey(user);
     }
-
+    public String findName(User user){ //找回用户名
+        ArrayList<User> result = selectSelective(user);
+        return result.get(0).getUsername();
+    }
+    public User PersonalInformation(Integer userid){ //通过用户id返回部分个人信息（保证账号信息的隐私性和安全性）
+        User user = userMapper.selectByPrimaryKey(userid);
+        User result = new User();
+        result.setUsername(user.getUsername());
+        result.setEmail(user.getEmail());
+        result.setSex(user.getSex());
+        result.setBirthday(user.getBirthday());
+        result.setHobby(user.getHobby());
+        return result;
+    }
+    public int changeInformation(User user){
+        return userMapper.changeInformation(user);
+    }
 }

@@ -107,7 +107,8 @@
         if('${findKeyResult}'==0)
             alert("安全问题错误，请重新输入！");
         if('${findKeyResult}'==1){
-            alert("密码找回成功，点击跳转到登录界面");
+            var username = '${username}';
+            alert("密码找回成功\n你的用户名为"+username+"\n点击跳转到登录界面");
             window.location.href="login";
         }
         if('${findKeyResult}'==2)
