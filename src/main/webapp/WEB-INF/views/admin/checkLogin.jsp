@@ -9,7 +9,7 @@
          pageEncoding="utf-8" %>
 <%--防强行跳转 --%>
 <%
-    if (session.getAttribute("isLogin") == null) {
+    if (session.getAttribute("isAdminLogin") == null) {
         out.println("<script>" +
                 "window.location='login';" +
                 "alert('请先登录');"+

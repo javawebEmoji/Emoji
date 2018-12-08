@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 public class Admin_LogoutController {
     @RequestMapping("admin/logout")
     public String logout(HttpSession session) throws Exception {
-        session.invalidate();
+        session.setAttribute("isAdminLogin",null);
         return "redirect:login";
     }
 }
