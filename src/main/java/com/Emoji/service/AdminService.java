@@ -43,7 +43,7 @@ public class AdminService {
                     System.out.println("设置用户 ---------------->：" + admin);
                     result.put("status", 1);
                     result.put("tip", "登录成功");
-                    session.setAttribute("isLogin",admin);
+                    session.setAttribute("isAdminLogin",admin);
                 } else {
                     /** 密码错误     */
                     result.put("status", 2);
