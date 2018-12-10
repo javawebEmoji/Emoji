@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Emoji.dao.CommentMapper" >
+  <resultMap id="BaseResultMap" type="com.Emoji.entity.Comment" >
+    <id column="comment_id" property="comment_id" jdbcType="INTEGER" />
+    <result column="comment_username" property="comment_username" jdbcType="VARCHAR" />
+    <result column="comment_content" property="comment_content" jdbcType="VARCHAR" />
+    <result column="comment_time" property="comment_time" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    comment_id, comment_username, comment_content, comment_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from comment
+    where comment_id = #{comment_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from comment
+    where comment_id = #{comment_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.Emoji.entity.Comment" >
+    insert into comment (comment_id, comment_username, comment_content, 
+      comment_time)
+    values (#{comment_id,jdbcType=INTEGER}, #{comment_username,jdbcType=VARCHAR}, #{comment_content,jdbcType=VARCHAR}, 
+      #{comment_time,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.Emoji.entity.Comment" >
+    insert into comment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="comment_id != null" >
+        comment_id,
+      </if>
+      <if test="comment_username != null" >
+        comment_username,
+      </if>
+      <if test="comment_content != null" >
+        comment_content,
+      </if>
+      <if test="comment_time != null" >
+        comment_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="comment_id != null" >
+        #{comment_id,jdbcType=INTEGER},
+      </if>
+      <if test="comment_username != null" >
+        #{comment_username,jdbcType=VARCHAR},
+      </if>
+      <if test="comment_content != null" >
+        #{comment_content,jdbcType=VARCHAR},
+      </if>
+      <if test="comment_time != null" >
+        #{comment_time,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.Emoji.entity.Comment" >
+    update comment
+    <set >
+      <if test="comment_username != null" >
+        comment_username = #{comment_username,jdbcType=VARCHAR},
+      </if>
+      <if test="comment_content != null" >
+        comment_content = #{comment_content,jdbcType=VARCHAR},
+      </if>
+      <if test="comment_time != null" >
+        comment_time = #{comment_time,jdbcType=DATE},
+      </if>
+    </set>
+    where comment_id = #{comment_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.Emoji.entity.Comment" >
+    update comment
+    set comment_username = #{comment_username,jdbcType=VARCHAR},
+      comment_content = #{comment_content,jdbcType=VARCHAR},
+      comment_time = #{comment_time,jdbcType=DATE}
+    where comment_id = #{comment_id,jdbcType=INTEGER}
+  </update>
+</mapper>
