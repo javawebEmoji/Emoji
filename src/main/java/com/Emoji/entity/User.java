@@ -17,7 +17,7 @@ public class User {
 
     private String email;
 
-    private Date birthday;
+    private String birthday;
 
     private String hobby;
 
@@ -81,11 +81,11 @@ public class User {
         this.email = email;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

@@ -91,15 +91,8 @@
             </ul>
         </li>
         <%
-            session = request.getSession();
             if (session.getAttribute("isLogin")==null){
                 session.setAttribute("isLogin",false);
-            }
-            if (request.getAttribute("LoginResult")!=null) {
-                if ((int) request.getAttribute("LoginResult") == 2) { //退出登录后，LoginResult 为2
-                    session.setAttribute("isLogin", false);
-                    session.setAttribute("userid",null);
-                }
             }
             if ((boolean) session.getAttribute("isLogin")==false){
                 out.print("<li style=\"float: right;;\">\n" +
@@ -114,7 +107,7 @@
                         "<a href=\"loginOff\">退出登录</a>\n" +
                         "</li>\n" +
                         "<li style=\"float: right;\">\n" +
-                        "<a href=\"personal\">个人中心</a>\n" +
+                        "<a href=\"personalCenter\">个人中心</a>\n" +
                         "</li>");
             }
         %>
@@ -157,7 +150,7 @@
                         "<a href=\"loginOff\">退出登录</a>\n" +
                         "</li>\n" +
                         "<li style=\"float: right;\">\n" +
-                        "<a href=\"personal\">个人中心</a>\n" +
+                        "<a href=\"personalCenter\">个人中心</a>\n" +
                         "</li>");
             }
         %>

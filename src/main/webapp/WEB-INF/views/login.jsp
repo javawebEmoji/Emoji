@@ -15,18 +15,6 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
 </head>
 <body>
- <%  session = request.getSession();
-     if (session.getAttribute("isLogin")==null){
-         session.setAttribute("isLogin",false);
-     }
-     System.out.println("request.getAttribute(\"LoginResult\") :"+request.getAttribute("LoginResult"));
-     if (request.getAttribute("LoginResult")!=null) {
-         if ((int) request.getAttribute("LoginResult") == 1) {
-             session.setAttribute("isLogin", true);
-             session.setAttribute("userid",request.getAttribute("userid"));
-         }
-     }
- %>
 <div class="wrap login_wrap">
     <div class="content">
         <div class="logo"></div>
@@ -95,9 +83,6 @@
     if('${LoginResult}'!=''){
         if('${LoginResult}'==0)
             alert("用户名或密码错误，登录失败！");
-        if('${LoginResult}'==1){
-            alert("登录成功,跳转到首页");
-            window.location.href="/"}
     }
 </script>
 </html>

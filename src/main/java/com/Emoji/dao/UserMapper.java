@@ -16,6 +16,7 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+    int changeInformation(User record);
     User selectLogin(User record);
     ArrayList<User> selectSelective(User record);
     int findkey(User record);

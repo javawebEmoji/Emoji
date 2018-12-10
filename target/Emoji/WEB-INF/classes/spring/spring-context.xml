@@ -34,7 +34,7 @@
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
         <property name="jdbcUrl" value="jdbc:mysql://localhost/emoji?characterEncoding=utf8"></property>
         <property name="user" value="root"></property>
-        <property name="password" value="123456"></property>
+        <property name="password" value="xiaowen"></property>
         <property name="minPoolSize" value="1"></property>
         <property name="maxPoolSize" value="20"></property>
         <property name="initialPoolSize" value="1"></property>
