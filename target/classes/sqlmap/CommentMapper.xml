@@ -5,21 +5,47 @@
     <id column="comment_id" property="comment_id" jdbcType="INTEGER" />
     <result column="comment_username" property="comment_username" jdbcType="VARCHAR" />
     <result column="comment_content" property="comment_content" jdbcType="VARCHAR" />
-    <result column="comment_time" property="comment_time" jdbcType="DATE" />
+    <result column="comment_time" property="comment_time" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     comment_id, comment_username, comment_content, comment_time
   </sql>
+
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select
+    *
+    from comment
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from comment
+    where comment_id = #{comment_id,jdbcType=INTEGER}
+  </delete>
+
+
+  <select id="selectByCondition" resultMap="BaseResultMap" parameterType="com.Emoji.entity.Comment" >
+  SELECT * FROM comment
+  where
+  <if test="comment_username != null">
+    comment_username like "%"#{comment_username}"%"
+  </if>
+  <if test="comment_content != null">
+    AND comment_content like "%"#{comment_content}"%"
+  </if>
+  <!--<if test="startTime != null and endTime!=null">-->
+    <!--AND comment_time between DATE_FORMAT('${startTime}'', '%Y-%m-%d %H:%T:%s') and DATE_FORMAT('${endTime}'', '%Y-%m-%d %H:%T:%s')-->
+  <!--</if>-->
+  </select>
+
+
+
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from comment
     where comment_id = #{comment_id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from comment
-    where comment_id = #{comment_id,jdbcType=INTEGER}
-  </delete>
   <insert id="insert" parameterType="com.Emoji.entity.Comment" >
     insert into comment (comment_id, comment_username, comment_content, 
       comment_time)

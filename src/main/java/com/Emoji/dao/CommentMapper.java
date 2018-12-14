@@ -2,8 +2,10 @@ package com.Emoji.dao;
 
 import com.Emoji.entity.Comment;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public interface CommentMapper {
-    int deleteByPrimaryKey(Integer comment_id);
 
     int insert(Comment record);
 
@@ -14,4 +16,10 @@ public interface CommentMapper {
     int updateByPrimaryKeySelective(Comment record);
 
     int updateByPrimaryKey(Comment record);
+
+
+    ArrayList<Comment> selectAll();
+    int deleteByPrimaryKey(Integer comment_id);
+    ArrayList<Comment> selectByCondition(Comment params);
+
 }

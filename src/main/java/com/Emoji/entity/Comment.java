@@ -42,4 +42,15 @@ public class Comment {
     public void setComment_time(Date comment_time) {
         this.comment_time = comment_time;
     }
+
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "comment_id=" + comment_id +
+                ", comment_username='" + comment_username + '\'' +
+                ", comment_content='" + comment_content + '\'' +
+                ", comment_time=" + comment_time +
+                '}';
+    }
 }

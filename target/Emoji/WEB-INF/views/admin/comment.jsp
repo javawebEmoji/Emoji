@@ -1,4 +1,9 @@
-<%--
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.Emoji.entity.Comment" %>
+<%@ page import="org.springframework.ui.Model" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Date" %><%--
   Created by IntelliJ IDEA.
   User: Lenovo
   Date: 2018/12/2
@@ -157,43 +162,53 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">评论管理</h3>
                 </div>
+                <%--搜索框--%>
+                <form class="form-inline" action="/admin/comment/search" methon="post" style="margin-left:25px">
+                    <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username">
+                    <input class="form-control" type="text" placeholder="请输入评论内容" name="content">
+                    <%--<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">--%>
+                    <input class="btn btn-primary" type="submit" value="查询">
+                </form>
                 <div class="panel-body">
                     <table class="table">
                         <thead>
                         <tr>
                             <th>序号</th>
-                            <th>昵称</th>
-                            <th>用户名</th>
-                            <th>邮箱</th>
-                            <th>编辑</th>
+                            <th>评论人用户名</th>
+                            <th>评论内容</th>
+                            <th>评论时间</th>
                             <th>删除</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Steve</td>
-                            <td>Jobs</td>
-                            <td>@steve</td>
-                            <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Simon</td>
-                            <td>Philips</td>
-                            <td>@simon</td>
-                            <td><button type="button" class="btn btn-success btn-sm">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Jane</td>
-                            <td>Doe</td>
-                            <td>@jane</td>
-                            <td><button type="button" class="btn btn-success btn-sm">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
+                        <%--<%--%>
+                            <%--ArrayList<Comment> comments = (ArrayList<Comment>)session.getAttribute("comments");--%>
+                            <%--for(int i = 0; i < comments.size(); i ++){--%>
+                                <%--Comment comment = comments.get(i);--%>
+                                <%--Date date = comment.getComment_time();--%>
+                                <%--SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");--%>
+                                <%--String comment_time = sdf.format(date);--%>
+                        <%--%>--%>
+                            <%--<tr>--%>
+                                <%--<td><%=comment.getComment_id()%></td>--%>
+                                <%--<td><%=comment.getComment_username()%></td>--%>
+                                <%--<td><%=comment.getComment_content()%></td>--%>
+                                <%--<td><%=comment_time%></td>--%>
+                                <%--<td><button type="button" class="btn btn-danger btn-sm delete" id="<%=comment.getComment_id()%>" >删除</button></td>--%>
+                            <%--</tr>--%>
+                        <%--<%--%>
+                            <%--}--%>
+                        <%--%>--%>
+                        <c:forEach items="${comments}" var="comment"
+                                   varStatus="stat">
+                            <tr>
+                                <td>${comment.comment_id}</td>
+                                <td>${comment.comment_username}</td>
+                                <td>${comment.comment_content}</td>
+                                <td>${comment.comment_time}</td>
+                                <td><button type="button" class="btn btn-danger btn-sm delete" id="${comment.comment_id}" >删除</button></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
                     </table>
                 </div>
@@ -255,6 +270,11 @@
 <script src="../js/klorofil-common.js"></script>
 <script>
     $(function() {
+
+        $(".delete").click(function(){
+            window.location = "/admin/comment/delete?id=" + $(this).attr("id");
+        })
+
         var data, options;
 
         // headline charts
