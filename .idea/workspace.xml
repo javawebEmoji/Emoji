@@ -6,12 +6,291 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6bb6cf-27c4-48a7-b72d-9045b44b5225" name="Default Changelist" comment="">
+    <list default="true" id="1b6bb6cf-27c4-48a7-b72d-9045b44b5225" name="Default Changelist" comment="个人中心修改个人资料">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_Administrator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_LogoutController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/User_ContributeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/User_IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/User_LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/User_PersonalCenterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/User_RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/User_SearchController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/User_ThelatestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/dao/AdminMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/dao/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/entity/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/service/AdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/generator.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/mybatis/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/spring/spring-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/spring/spring-mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/sqlmap/AdminMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/sqlmap/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/ant-1.10.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/ant-launcher-1.10.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/asm-6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/c3p0-0.9.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/cglib-3.2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/jackson-core-2.9.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/jackson-databind-2.9.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/jsp-api-2.2.1-b03.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/jsqlparser-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/mchange-commons-java-0.2.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/mybatis-3.4.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/mybatis-spring-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/mysql-connector-java-8.0.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/pagehelper-5.1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/protobuf-java-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/servlet-api-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-aop-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-beans-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-context-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-core-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-expression-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-jcl-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-jdbc-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-oxm-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-tx-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-web-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/spring-webmvc-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/administrator.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/checkLogin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/headNavigation.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/leftNavigation.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/user.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/collection.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/contribute.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/download.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/findkey.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/mycontribute.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/personalCenter.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/search.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/thelatest.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/drawer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/next.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/pc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/tail.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/css/top.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/js/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/js/drawer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/js/flash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/js/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/js/klorofil-common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/js/show.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/ah.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/apple-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/cha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/drawer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/gif.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/close_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/close_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/maximization_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/maximization_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/miniaturization_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/miniaturization_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/next_blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/next_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/prev_blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/icons/prev_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/40.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/42.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/46.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/47.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/48.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/latest/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/login-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/logo-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/nc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/photo1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/photo2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/photo3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/photo4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/profile-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/cooker/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/cooker/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/cooker/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/cooker/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/cooker/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/cooker/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/dragon/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/dragon/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/dragon/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/dragon/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/dragon/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/dragon/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/duck/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/duck/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/duck/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/duck/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/duck/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/duck/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/fox/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/fox/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/fox/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/fox/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/fox/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/fox/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/panda/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/panda/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/panda/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/panda/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/panda/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/set/panda/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/sr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/user-medium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/user1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/user2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/user3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/user4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/user5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/wall.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/xb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/picture/yx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/css/chartist-custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/css/chartist-custom.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/css/chartist.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/css/chartist.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/js/chartist.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/js/chartist.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/map/chartist.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/map/chartist.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/chartist/scss/chartist.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery-slimscroll/jquery.slimscroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery-slimscroll/jquery.slimscroll.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery.easy-pie-chart/angular.easypiechart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery.easy-pie-chart/angular.easypiechart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery.easy-pie-chart/easypiechart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery.easy-pie-chart/easypiechart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery.easy-pie-chart/jquery.easypiechart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/jquery/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/linearicons/fonts/Linearicons-Free.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/linearicons/fonts/Linearicons-Free.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/linearicons/fonts/Linearicons-Free.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/linearicons/fonts/Linearicons-Free.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/linearicons/fonts/Linearicons-Free.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/linearicons/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/toastr/toastr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/toastr/toastr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/toastr/toastr.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/vendor/toastr/toastr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_Administrator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_LogoutController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/User_ContributeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/User_IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/User_LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/User_PersonalCenterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/User_RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/User_SearchController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/User_ThelatestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/dao/AdminMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/dao/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/entity/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/service/AdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generator.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sqlmap/AdminMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sqlmap/UserMapper.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,15 +316,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_PersonalCenterController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_ContributeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
@@ -54,11 +324,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -84,6 +354,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-context.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_Administrator.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,7 +376,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/administrator.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2964">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -336,31 +615,6 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Emoji" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Emoji" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Emoji" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Emoji" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Emoji" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Emoji" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Emoji" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Emoji" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Emoji" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Emoji" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Emoji" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -371,7 +625,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544749742207" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544750534694" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -487,7 +741,7 @@
       <workItem from="1544589691586" duration="85000" />
       <workItem from="1544592504169" duration="1160000" />
       <workItem from="1544613495371" duration="75000" />
-      <workItem from="1544746463610" duration="3147000" />
+      <workItem from="1544746463610" duration="3938000" />
     </task>
     <task id="LOCAL-00001" summary="个人中心修改个人资料">
       <created>1544248840982</created>
@@ -496,16 +750,24 @@
       <option name="project" value="LOCAL" />
       <updated>1544248840982</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="个人中心修改个人资料">
+      <created>1544749807382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544749807382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39809000" />
+    <option name="totallyTimeSpent" value="40600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2272118" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2272118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -515,7 +777,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.5736544" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.5736544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -523,11 +785,11 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32840723" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" visible="true" weight="0.0694051" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32840723" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49865952" visible="true" weight="0.0694051" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -543,6 +805,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="个人中心修改个人资料" />
@@ -785,13 +1073,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/picture/favicon.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="64" column="57" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -865,13 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
@@ -882,7 +1156,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/administrator.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2964">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -903,7 +1177,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
         </state>
       </provider>
     </entry>
