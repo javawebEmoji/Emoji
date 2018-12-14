@@ -62,7 +62,7 @@
 
     <!-- 扫描生成所有dao层 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.Emoji.dao,com.Emoji.admin.dao"></property>
+        <property name="basePackage" value="com.Emoji.dao"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
 </beans>
