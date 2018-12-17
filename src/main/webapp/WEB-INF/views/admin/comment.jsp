@@ -157,15 +157,21 @@
     <div class="main">
         <!-- MAIN CONTENT -->
         <div class="main-content">
-            <!-- 用户表格 -->
+            <!-- 评论表格 -->
             <div class="panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">评论管理</h3>
                 </div>
                 <%--搜索框--%>
+                <%--<form class="form-inline" action="/admin/comment/search" methon="post" style="margin-left:25px">--%>
+                    <%--<input class="form-control" type="text" placeholder="请输入评论人用户名" name="username">--%>
+                    <%--<input class="form-control" type="text" placeholder="请输入评论内容" name="content">--%>
+                    <%--&lt;%&ndash;<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">&ndash;%&gt;--%>
+                    <%--<input class="btn btn-primary" type="submit" value="查询">--%>
+                <%--</form>--%>
                 <form class="form-inline" action="/admin/comment/search" methon="post" style="margin-left:25px">
-                    <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username">
-                    <input class="form-control" type="text" placeholder="请输入评论内容" name="content">
+                    <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username" value=${username}>
+                    <input class="form-control" type="text" placeholder="请输入评论内容" name="content" value="${content}">
                     <%--<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">--%>
                     <input class="btn btn-primary" type="submit" value="查询">
                 </form>
@@ -199,8 +205,7 @@
                         <%--<%--%>
                             <%--}--%>
                         <%--%>--%>
-                        <c:forEach items="${comments}" var="comment"
-                                   varStatus="stat">
+                        <c:forEach items="${comments}" var="comment" varStatus="stat">
                             <tr>
                                 <td>${comment.comment_id}</td>
                                 <td>${comment.comment_username}</td>
@@ -213,7 +218,32 @@
                     </table>
                 </div>
             </div>
-            <!-- 用户表格结束 -->
+            <!-- 评论表格结束 -->
+            <!-- 分页信息 -->
+            <div> 当前第：${pageInfo.pageNum}页，总共：${pageInfo.pages}页，总共：${pageInfo.total}条记录</div>
+            <!-- 分页信息结束 -->
+            <!-- 分页条 -->
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="/admin/comment/search?pn=1&username=${username}&content=${content}">首页</a></li>
+                <c:if test="${pageInfo.hasPreviousPage }">
+                    <li class="page-item">
+                        <a  class="page-link" href="/admin/comment/search?pn=${pageInfo.pageNum-1}&username=${username}&content=${content}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                </c:if>
+                <c:forEach items="${pageInfo.navigatepageNums }" var="page_Num">
+                    <c:if test="${page_Num == pageInfo.pageNum }"><li class="page-item active"><a class="page-link" href="#">${ page_Num}</a></li></c:if>
+                    <c:if test="${page_Num != pageInfo.pageNum }"><li class="page-item"><a class="page-link" href="/admin/comment/search?pn=${ page_Num}&username=${username}&content=${content}">${ page_Num}</a></li></c:if>
+                </c:forEach>
+                <c:if test="${pageInfo.hasNextPage }">
+                    <li class="page-item"><a class="page-link" href="/admin/comment/search?pn=${pageInfo.pageNum+1}&username=${username}&content=${content}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </c:if>
+                <li><a class="page-link" href="/admin/comment/search?pn=${pageInfo.pages}&username=${username}&content=${content}">末页</a></li>
+            </ul>
+            <!-- 分页条结束 -->
+        </div>
+    </div>
 
             <!-- 模态框 -->
             <div class="modal fade" id="editModal">
@@ -240,15 +270,7 @@
                 </div>
             </div>
             <!-- 模态框结束 -->
-            <!-- 分页 -->
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-            <!-- 分页结束 -->
+
         </div>
     </div>
     <!-- END MAIN -->
