@@ -7,60 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b978f3e-ee36-4bac-a2ec-663b15389d78" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Emoji_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Emoji_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Emoji_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Emoji_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_6_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_6_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2_1_b03.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2_1_b03.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_6_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_6_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_7_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comment.md" beforeDir="false" afterPath="$PROJECT_DIR$/comment.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment.sql" beforeDir="false" afterPath="$PROJECT_DIR$/comment.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/dao/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/dao/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sqlmap/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sqlmap/CommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/comment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/comment.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/generator.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/spring/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/spring/spring-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/sqlmap/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/sqlmap/CommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/comment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/comment.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generator.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sqlmap/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sqlmap/CommentMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,38 +40,41 @@
     <session id="-1672411028">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.199" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.84" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.95" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="19" />
-          <entry key="jsp" value="11" />
+          <entry key="java" value="20" />
+          <entry key="jsp" value="15" />
           <entry key="md" value="1" />
           <entry key="properties" value="2" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="11" />
+          <entry key="xml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="19" />
-          <entry key="JSP" value="11" />
+          <entry key="JAVA" value="20" />
+          <entry key="JSP" value="15" />
           <entry key="Markdown" value="1" />
           <entry key="Properties" value="2" />
           <entry key="SQL" value="1" />
-          <entry key="XML" value="11" />
+          <entry key="XML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2170" />
-          <entry key="jsp" value="1115" />
+          <entry key="java" value="2250" />
+          <entry key="jsp" value="1327" />
           <entry key="properties" value="6" />
           <entry key="sql" value="31" />
           <entry key="xml" value="311" />
@@ -126,8 +82,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2170" />
-          <entry key="JSP" value="1115" />
+          <entry key="JAVA" value="2250" />
+          <entry key="JSP" value="1327" />
           <entry key="Properties" value="6" />
           <entry key="SQL" value="37" />
           <entry key="XML" value="305" />
@@ -138,55 +94,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_LoginController.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+            <state relative-caret-position="2052">
+              <caret line="108" column="19" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="215" column="7" lean-forward="true" selection-start-line="215" selection-start-column="7" selection-end-line="215" selection-end-column="7" />
+            <state relative-caret-position="513">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-21">
-              <caret line="38" column="17" selection-start-line="37" selection-start-column="18" selection-end-line="38" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-context.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="41" column="11" lean-forward="true" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+            <state relative-caret-position="340">
+              <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/comment.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+            <state relative-caret-position="285">
+              <caret line="247" column="24" lean-forward="true" selection-start-line="247" selection-start-column="24" selection-end-line="247" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -202,13 +140,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/generator.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" />
         <option value="$PROJECT_DIR$/comment.sql" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/comment.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/Emoji/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Emoji/dao/CommentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlmap/CommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/Emoji/entity/Comment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/comment.jsp" />
       </list>
     </option>
   </component>
@@ -236,7 +174,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="89" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -246,6 +184,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -372,6 +312,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Emoji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Emoji" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -397,15 +345,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="dat&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;post&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544578779554" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544750868628" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -510,17 +457,54 @@
       <workItem from="1544486458241" duration="5965000" />
       <workItem from="1544510812766" duration="11235000" />
       <workItem from="1544576000160" duration="2799000" />
-      <workItem from="1544747910779" duration="553000" />
+      <workItem from="1544747910779" duration="2966000" />
+      <workItem from="1544770998991" duration="614000" />
+      <workItem from="1544955912940" duration="5724000" />
+      <workItem from="1545046059389" duration="1496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20337000" />
+    <option name="totallyTimeSpent" value="30799000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23146747" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32840723" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32840723" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32840723" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22163388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
@@ -553,40 +537,6 @@
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Web" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.24962178" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32840723" />
-      <window_info anchor="bottom" id="Spring" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32840723" />
-      <window_info anchor="bottom" id="Java Enterprise" order="5" />
-      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.32840723" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="14" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Maven Projects" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,13 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="22" column="26" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="100" column="49" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -645,9 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-57" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/generator.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -702,31 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="49" column="46" lean-forward="true" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/service/CommentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="26" selection-start-column="26" selection-end-column="26" />
-          <folding>
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/comment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="170" column="23" selection-start-line="170" selection-start-column="23" selection-end-line="170" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -734,9 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -754,24 +670,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="215" column="7" lean-forward="true" selection-start-line="215" selection-start-column="7" selection-end-line="215" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
           <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/leftNavigation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/headNavigation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="59" column="95" lean-forward="true" selection-start-line="59" selection-start-column="95" selection-end-line="59" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -782,17 +698,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-context.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="41" column="11" lean-forward="true" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+        <state relative-caret-position="-133">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="215" column="7" lean-forward="true" selection-start-line="215" selection-start-column="7" selection-end-line="215" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
+        <state relative-caret-position="345">
           <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="41" column="11" lean-forward="true" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="108" column="19" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/comment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="247" column="24" lean-forward="true" selection-start-line="247" selection-start-column="24" selection-end-line="247" selection-end-column="24" />
         </state>
       </provider>
     </entry>
