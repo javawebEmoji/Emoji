@@ -25,7 +25,7 @@
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select *
-    from user;
+    from user
   </select>
   <select id="selectSelective" resultMap="BaseResultMap" parameterType="com.Emoji.entity.User">
     select *
