@@ -170,8 +170,8 @@
                     <%--<input class="btn btn-primary" type="submit" value="查询">--%>
                 <%--</form>--%>
                 <form class="form-inline" action="/admin/comment/search" methon="post" style="margin-left:25px">
-                    <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username">
-                    <input class="form-control" type="text" placeholder="请输入评论内容" name="content">
+                    <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username" value=${username}>
+                    <input class="form-control" type="text" placeholder="请输入评论内容" name="content" value="${content}">
                     <%--<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">--%>
                     <input class="btn btn-primary" type="submit" value="查询">
                 </form>
@@ -224,22 +224,22 @@
             <!-- 分页信息结束 -->
             <!-- 分页条 -->
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="/admin/comment?pn=1">首页</a></li>
+                <li class="page-item"><a class="page-link" href="/admin/comment/search?pn=1&username=${username}&content=${content}">首页</a></li>
                 <c:if test="${pageInfo.hasPreviousPage }">
                     <li class="page-item">
-                        <a  class="page-link" href="/admin/comment?pn=${pageInfo.pageNum-1}" aria-label="Previous">
+                        <a  class="page-link" href="/admin/comment/search?pn=${pageInfo.pageNum-1}&username=${username}&content=${content}" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
                 </c:if>
                 <c:forEach items="${pageInfo.navigatepageNums }" var="page_Num">
                     <c:if test="${page_Num == pageInfo.pageNum }"><li class="page-item active"><a class="page-link" href="#">${ page_Num}</a></li></c:if>
-                    <c:if test="${page_Num != pageInfo.pageNum }"><li class="page-item"><a class="page-link" href="/admin/comment?pn=${ page_Num}">${ page_Num}</a></li></c:if>
+                    <c:if test="${page_Num != pageInfo.pageNum }"><li class="page-item"><a class="page-link" href="/admin/comment/search?pn=${ page_Num}&username=${username}&content=${content}">${ page_Num}</a></li></c:if>
                 </c:forEach>
                 <c:if test="${pageInfo.hasNextPage }">
-                    <li class="page-item"><a class="page-link" href="/admin/comment?pn=${pageInfo.pageNum+1}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                    <li class="page-item"><a class="page-link" href="/admin/comment/search?pn=${pageInfo.pageNum+1}&username=${username}&content=${content}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                 </c:if>
-                <li><a class="page-link" href="/admin/comment?pn=${pageInfo.pages}">末页</a></li>
+                <li><a class="page-link" href="/admin/comment/search?pn=${pageInfo.pages}&username=${username}&content=${content}">末页</a></li>
             </ul>
             <!-- 分页条结束 -->
         </div>

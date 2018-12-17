@@ -35,10 +35,12 @@ public class Admin_CommentController {
     private ArrayList<Comment> comments = null;
 
     @RequestMapping("admin/comment")
-    public String displayComments(@RequestParam(value="pn",defaultValue="1")Integer pn, Model model){
+    public String displayComments(@RequestParam(value="pn",defaultValue="1")Integer pn, Model model,String username, String content){
         //从第一条开始 每页查询五条数据
         PageHelper.startPage(pn, 5);
-
+        System.out.println(username);
+        model.addAttribute("username",username);
+        model.addAttribute("content",content);
         if(comments == null){
             comments = commentService.selectAll();
             //将评论信息放入PageInfo对象里
@@ -47,11 +49,13 @@ public class Admin_CommentController {
 
             model.addAttribute("comments",comments);
             comments = null;
+            System.out.println("all");
         }else{
             PageInfo page = new PageInfo(comments,5);
             model.addAttribute("pageInfo", page);
 
             model.addAttribute("comments",comments);
+            System.out.println("if");
         }
         return "admin/comment";
     }
@@ -74,10 +78,15 @@ public class Admin_CommentController {
         params.setComment_username(username);
         params.setComment_content(content);
         comments = commentService.selectByCondition(params);
-        System.out.println(comments.toString());
+//        System.out.println(comments.toString());
 
         PageInfo page = new PageInfo(comments,5);
         model.addAttribute("pageInfo", page);
+
+        model.addAttribute("comments",comments);
+
+        model.addAttribute("username",username);
+        model.addAttribute("content",content);
         return "redirect:/admin/comment";
     }
 }
