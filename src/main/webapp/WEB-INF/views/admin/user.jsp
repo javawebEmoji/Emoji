@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lenovo
@@ -162,38 +164,25 @@
                         <thead>
                         <tr>
                             <th>序号</th>
-                            <th>昵称</th>
                             <th>用户名</th>
-                            <th>邮箱</th>
+                            <th>手机号</th>
+                            <th>创建时间</th>
                             <th>编辑</th>
                             <th>删除</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Steve</td>
-                            <td>Jobs</td>
-                            <td>@steve</td>
-                            <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Simon</td>
-                            <td>Philips</td>
-                            <td>@simon</td>
-                            <td><button type="button" class="btn btn-success btn-sm">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Jane</td>
-                            <td>Doe</td>
-                            <td>@jane</td>
-                            <td><button type="button" class="btn btn-success btn-sm">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
+                        <c:forEach items="${users}" var="one" varStatus="num">
+                            <tr>
+                                <td>${num.count}</td>
+                                <td>${one.username}</td>
+                                <td>${one.phone}</td>
+                                <td>${one.createtime}</td>
+                                <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal" onclick="Values('${one.userid}','${one.username}','${one.phone}')">编辑</button></td>
+                                <td><button type="button" class="btn btn-danger btn-sm delete" id="${one.userid}">删除</button></td>
+                            </tr>
+                        </c:forEach>
+
                         </tbody>
                     </table>
                 </div>
@@ -207,18 +196,26 @@
 
                         <!-- 模态框头部 -->
                         <div class="modal-header">
-                            <h4 class="modal-title">模态框头部</h4>
+                            <h4 class="modal-title">编辑用户信息</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
                         <!-- 模态框主体 -->
                         <div class="modal-body">
-                            模态框内容..
+                            <form action="changeInformation" method="post" id="AdminChange">
+                                <input type="hidden" id="userid" name="userid">
+                                用户名：<input type="text" id="username" name="username">
+                                手机号码:  <input type="text" id="phone" name="phone">
+                            </form>
                         </div>
 
                         <!-- 模态框底部 -->
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消更改
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="AdminChangeInformation()">
+                                提交更改
+                            </button>
                         </div>
 
                     </div>
@@ -254,7 +251,21 @@
 <script src="../vendor/chartist/js/chartist.min.js"></script>
 <script src="../js/klorofil-common.js"></script>
 <script>
+    function AdminChangeInformation(){
+        document.getElementById("AdminChange").submit();
+    }
+    <%--${"#editModal"}.modal("hide");--%>
+        function Values(userid,username,phone) {
+
+        document.getElementById("userid").value = userid;
+        document.getElementById("username").value = username;
+        document.getElementById("phone").value = phone;
+
+    }
     $(function() {
+        $(".delete").click(function(){
+            window.location = "/admin/user/delete?id=" + $(this).attr("id");
+        })
         var data, options;
 
         // headline charts

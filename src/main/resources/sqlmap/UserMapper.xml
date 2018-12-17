@@ -23,6 +23,10 @@
     from user
     where username =#{username} and password =#{password}
   </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select *
+    from user;
+  </select>
   <select id="selectSelective" resultMap="BaseResultMap" parameterType="com.Emoji.entity.User">
     select *
     from user

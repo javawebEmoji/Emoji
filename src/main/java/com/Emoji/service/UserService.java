@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 
 @Service
 public class UserService {
@@ -63,5 +64,14 @@ public class UserService {
     }
     public int changeInformation(User user){
         return userMapper.changeInformation(user);
+    }
+    public int updateByPrimaryKeySelective(User user){
+        return userMapper.updateByPrimaryKeySelective(user);
+    }
+    public int deleteByPrimaryKey(Integer userid){
+        return  userMapper.deleteByPrimaryKey(userid);
+    }
+    public ArrayList<User>  selectAll(){
+        return userMapper.selectAll();
     }
 }

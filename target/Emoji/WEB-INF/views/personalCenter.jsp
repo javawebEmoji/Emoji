@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -132,6 +134,7 @@
         </div><!-- content 内容 -->
     </div><!-- main 主要部分 -->
 </div>
+<%--模态框--%>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -152,10 +155,11 @@
                         <form action="changeInformation" method="post" id="change">
 
                             <div class="form_text_ipt">
-                                <input name="email" id="email" type="text" placeholder="邮箱地址">
+                                <input name="email" id="email" type="text" placeholder="邮箱地址" <c:if test="${user.username != null}" >value="${user.email}"</c:if>>
                             </div>
                             <div class="form_text_ipt">
-                                <select name="sex">
+                                <select name="sex" >
+                                    <c:if test="${user.sex != null}" ><option value="${user.sex}">${user.sex}</option></c:if>
                                     <option value="null">性别</option>
                                     <option value="女">女</option>
                                     <option value="男">男</option>
@@ -163,11 +167,11 @@
                             </div>
 
                             <div class="form_text_ipt">
-                                <input name="birthday" id="birthday" type="date" placeholder="生日">
+                                <input name="birthday" id="birthday" type="date" placeholder="生日" <c:if test="${user.username != null}" >value="${user.birthday}"</c:if>>
                             </div>
 
                             <div class="form_text_ipt">
-                                <input name="hobby" id="hobby" type="text" placeholder="爱好">
+                                <input name="hobby" id="hobby" type="text" placeholder="爱好" <c:if test="${user.username != null}" >value="${user.hobby}"</c:if>>
                             </div>
                         </form>
 

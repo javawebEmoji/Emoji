@@ -20,4 +20,6 @@ public interface UserMapper {
     User selectLogin(User record);
     ArrayList<User> selectSelective(User record);
     int findkey(User record);
+    ArrayList<User> selectAll();
+
 }

@@ -115,7 +115,7 @@
 </div>
 <div class="top2">
     <a href="index.html" style="background: url(../../picture/logo.png) no-repeat 33%,5%;background-size: 100% 100%;float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-    <img id="ico" src="../../picture/drawer.png" alt="">
+    <img id="ico" src="picture/drawer.png" alt="">
 </div>
 <div class="drawer">
     <ul>
