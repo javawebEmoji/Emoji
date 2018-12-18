@@ -27,6 +27,7 @@ public class CommentService {
     }
 
     public ArrayList<Comment> selectByCondition(Comment params){
+        System.out.println(params.getComment_username()+" "+params.getComment_content());
         return commentMapper.selectByCondition(params);
     }
 }
