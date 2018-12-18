@@ -42,7 +42,7 @@ public class Admin_LoginController {
     @Autowired
     private AdminService adminService;
     @ResponseBody  // 异步请求的响应结果
-    @RequestMapping(value="/admin/loginAjax",produces="application/json; charset=UTF-8")
+    @RequestMapping(value="admin/loginAjax",produces="application/json; charset=UTF-8")
     public Map<String, Object> login(@RequestParam("admin_account")String admin_account,
                                      @RequestParam("admin_password")String admin_password,
                                      HttpSession session

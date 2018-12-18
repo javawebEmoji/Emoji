@@ -188,7 +188,28 @@
                 </div>
             </div>
             <!-- 用户表格结束 -->
-
+            <!-- 分页信息 -->
+            <div> 当前第：${userPage.pageNum}页，总共：${userPage.pages}页，总共：${userPage.total}条记录</div>
+            <!-- 分页信息结束 -->
+            <!-- 分页条 -->
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="/admin/user?pn=1">首页</a></li>
+                <c:if test="${userPage.hasPreviousPage }">
+                    <li class="page-item">
+                        <a  class="page-link" href="/admin/user?pn=${userPage.pageNum-1}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                </c:if>
+                <c:forEach items="${userPage.navigatepageNums}" var="page_Num">
+                    <c:if test="${page_Num == pageInfo.pageNum }"><li class="page-item active"><a class="page-link" href="#">${ page_Num}</a></li></c:if>
+                    <c:if test="${page_Num != pageInfo.pageNum }"><li class="page-item"><a class="page-link" href="/admin/user?pn=${ page_Num}">${ page_Num}</a></li></c:if>
+                </c:forEach>
+                <c:if test="${userPage.hasNextPage }">
+                    <li class="page-item"><a class="page-link" href="/admin/user?pn=${userPage.pageNum+1}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </c:if>
+                <li><a class="page-link" href="/admin/user?pn=${userPage.pages}">末页</a></li>
+            </ul>
             <!-- 模态框 -->
             <div class="modal fade" id="editModal">
                 <div class="modal-dialog">
@@ -222,24 +243,11 @@
                 </div>
             </div>
             <!-- 模态框结束 -->
-            <!-- 分页 -->
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-            <!-- 分页结束 -->
         </div>
     </div>
     <!-- END MAIN -->
     <div class="clearfix"></div>
     <footer>
-        <div class="container-fluid">
-            <p class="copyright">Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-
-        </div>
     </footer>
 </div>
 <!-- END WRAPPER -->

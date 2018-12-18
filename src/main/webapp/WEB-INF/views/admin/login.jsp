@@ -162,7 +162,7 @@
                 var params = $("#loginForm").serialize();
                 /** 发起异步请求登录 */
                 $.ajax({
-                    url:"/admin/loginAjax",
+                    url:"loginAjax",
                     type: "post",
                     dataType : "json",
                     data : params ,
@@ -203,7 +203,7 @@
 	</div>
 	<div class="login-body">
 		<div id="tip"></div>
-		<form id="loginForm" action="/admin/loginTest">
+		<form id="loginForm" action="loginTest">
 			<input id="admin_account" name="admin_account" class="input" type="text" placeholder="请输入账号">
 			<input id="admin_password" name="admin_password" class="input" type="password" placeholder="请输入密码">
 			<input id="login" class="submit" type="button" value="登录" hidefocus="true" style="cursor: pointer">
