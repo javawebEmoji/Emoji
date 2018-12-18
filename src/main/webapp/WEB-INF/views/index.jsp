@@ -90,6 +90,12 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="commentPart.html">评论区</a>
+        </li>
+        <li>
+            <a href="downloadPart.html">下载区</a>
+        </li>
         <%
             if (session.getAttribute("isLogin")==null){
                 session.setAttribute("isLogin",false);

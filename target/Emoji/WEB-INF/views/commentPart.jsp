@@ -1,8 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lenovo
   Date: 2018/11/25
-  Time: 19:47
+  Time: 19:49
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -18,46 +19,111 @@
     <link rel="stylesheet" href="css/tail.css">
     <link rel="stylesheet" href="css/next.css">
     <style>
-        .main {
-            height: auto;
+        .main{
             width: auto;
-            margin-top: 60px;
-            margin-left: 15.25%;
-            margin-right: 15.25%;
+            height: auto;
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 100px;
+            padding: 14px 28px;
             overflow: hidden;
             background: white;
-        }
-
-        .photo {
-            overflow: hidden;
-            height: auto;
-            width: auto;
-        }
-        .photo img {
-            overflow: hidden;
-            height:160px;
-            width: 160px;
-            margin: 2px;
 
         }
-        /* .photodiv {
-            height:0;
-            width: 15.68%;
-            margin: 2px;
-            padding: 15.68% 0 0;
-            white-space: nowrap;
-            display: inline-block;
+        .main a{
+            display: block;
+            float: left;
+            margin:5px;
+
         }
-        .photodiv img{
-            height: auto;
+        .main img{
+            width: 196px;
+            height: 184px;
+        }
+        .main img:hover{
+            /* 鼠标选中时，图片周围出现阴影效果 */
+            box-shadow: 2px 2px 5px #a0a0a0;
+        }
+
+
+        .comment, .commentBody{
+            width: 92%;
+            background-color: #ffffff;
+            border: 1px solid #e3e3e3;
+            border-radius: 10px;
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+            background-color:  #fdfdfd;;
+            margin: 20px auto 50px auto;
+            padding: 20px;
+        }
+
+        .inputForm{
+            font-size: 16px;
+            margin: 10px 0px;
+            padding: 20px 12px;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+
+        .comment input{
+            width: 50%;
+            height: 20px;
+        }
+
+        .comment textarea{
+            width: 90%;
+            height: 200px;
+        }
+
+        .comment .commentBtn{
+            width: 70px;
+            height: 30px;
+            text-align: center;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        .comment .commentBtn:hover{
+            color: #333;
+            background-color: #d4d4d4;
+            border-color: #8c8c8c;
+        }
+
+        .commentItem{
             width: 100%;
-        } */
-    </style>
-</head>
 
+        }
+
+        .commentItemBody{
+            width: 90%;
+            word-wrap: break-word;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        console.log(${isLogin});
+        function addComment(){
+            if(!${isLogin}){
+                alert("请先登录");
+                return false;
+            }
+        }
+    </script>
+</head>
 <body>
 <div class="top">
-
     <ul>
         <li>
             <a href="index.html" style="background: url(../../picture/logo.png) no-repeat 33%,5%;background-size: 100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -97,6 +163,7 @@
             <a href="downloadPart.html">下载区</a>
         </li>
         <%
+            session = request.getSession();
             if (session.getAttribute("isLogin")==null){
                 session.setAttribute("isLogin",false);
             }
@@ -105,7 +172,7 @@
                         "<a href=\"login\">登录</a>\n" +
                         "</li>\n" +
                         "<li style=\"float: right;\">\n" +
-                        "<a href=\"register\">注册</a>\n" +
+                        "<a href=\"login.html\">注册</a>\n" +
                         "</li>");
             }
             else if ((boolean) session.getAttribute("isLogin")==true){
@@ -121,7 +188,7 @@
 </div>
 <div class="top2">
     <a href="index.html" style="background: url(../../picture/logo.png) no-repeat 33%,5%;background-size: 100% 100%;float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-    <img id="ico" src="picture/drawer.png" alt="">
+    <img id="ico" src="../../picture/drawer.png" alt="">
 </div>
 <div class="drawer">
     <ul>
@@ -162,117 +229,45 @@
         %>
     </ul>
 </div>
-<!-- <div class="main">
-    <span style="float: left;">
-        <b>特大号厨具</b>
-    </span>
-    <span style="float: right;color:grey;">2018/9/16</span>
-    <br>
-    <br>
+<div class="main" id="imgdiv">
+    <h2>评论区</h2>
     <hr>
-    <div class="photo">
-        <div class="photodiv"><img src="picture/set/cooker/1.jpg"></div>
-        <div class="photodiv"><img src="picture/set/cooker/2.jpg"></div>
-        <div class="photodiv"><img src="picture/set/cooker/3.jpg"></div>
-        <div class="photodiv"><img src="picture/set/cooker/4.jpg"></div>
-        <div class="photodiv"><img src="picture/set/cooker/5.jpg"></div>
-        <div class="photodiv"><img src="picture/set/cooker/6.jpg"></div>
+
+    <!-- 评论模块 -->
+    <div class="commentContainer">
+        <div class="comment">
+            <h4>发表评论</h4>
+            <form action="/commentPart/addComment" onsubmit="return addComment()">
+                <textarea id="commentText" class="inputForm" placeholder="发表你的看法" name="content"></textarea><br>
+                <input id="commentBtn" class="commentBtn" type="submit" value="提交">
+            </form>
+        </div>
+
+
+        <%--<div id="commentBody" class="commentBody">--%>
+            <%--<div class="commentItem">--%>
+                <%--<span>昵称: </span><span>发表于2018年11月21日18:12</span>--%>
+                <%--<div class="commentItemBody">--%>
+                    <%--testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <c:forEach items="${comments}" var="comment" varStatus="stat">
+            <div id="commentBody" class="commentBody">
+                <div class="commentItem">
+                    <span>${comment.comment_username}: </span><span>发表于${comment.getComment_timeToString()}</span>
+                    <div class="commentItemBody">
+                        ${comment.comment_content}
+                    </div>
+                </div>
+            </div>
+        </c:forEach>
 
     </div>
-    <hr>
-</div> -->
-<div class="main">
-        <span style="float: left;">
-            <b>特大号厨具</b>
-        </span>
-    <span style="float: right;color:grey;">2018/9/16</span>
-    <br>
-    <br>
-    <hr>
-    <div class="photo">
-        <img src="picture/set/cooker/1.jpg">
-        <img src="picture/set/cooker/2.jpg">
-        <img src="picture/set/cooker/3.jpg">
-        <img src="picture/set/cooker/4.jpg">
-        <img src="picture/set/cooker/5.jpg">
-        <img src="picture/set/cooker/6.jpg">
+</div>
+<br>
+<br>
 
-    </div>
-    <hr>
-</div>
-<div class="main">
-        <span style="float: left;">
-            <b>小青龙</b>
-        </span>
-    <span style="float: right;color:grey;">2018/9/16</span>
-    <br>
-    <br>
-    <hr>
-    <div class="photo">
-        <img src="picture/set/dragon/1.gif">
-        <img src="picture/set/dragon/2.gif">
-        <img src="picture/set/dragon/3.gif">
-        <img src="picture/set/dragon/4.gif">
-        <img src="picture/set/dragon/5.gif">
-        <img src="picture/set/dragon/6.gif">
-    </div>
-    <hr>
-</div>
-<div class="main">
-        <span style="float: left;">
-            <b>狐狸跳舞</b>
-        </span>
-    <span style="float: right;color:grey;">2018/9/16</span>
-    <br>
-    <br>
-    <hr>
-    <div class="photo">
-        <img src="picture/set/fox/1.gif">
-        <img src="picture/set/fox/2.gif">
-        <img src="picture/set/fox/3.gif">
-        <img src="picture/set/fox/4.gif">
-        <img src="picture/set/fox/5.gif">
-        <img src="picture/set/fox/6.gif">
-    </div>
-    <hr>
-</div>
-<div class="main">
-        <span style="float: left;">
-            <b>小黄鸭</b>
-        </span>
-    <span style="float: right;color:grey;">2018/9/16</span>
-    <br>
-    <br>
-    <hr>
-    <div class="photo">
-        <img src="picture/set/duck/1.jpg">
-        <img src="picture/set/duck/2.jpg">
-        <img src="picture/set/duck/3.jpg">
-        <img src="picture/set/duck/4.jpg">
-        <img src="picture/set/duck/5.jpg">
-        <img src="picture/set/duck/6.jpg">
-    </div>
-    <hr>
-</div>
-<div class="main">
-        <span style="float: left;">
-            <b>国庆节</b>
-        </span>
-    <span style="float: right;color:grey;">2018/9/16</span>
-    <br>
-    <br>
-    <hr>
-    <div class="photo">
-        <img src="picture/set/panda/1.jpg">
-        <img src="picture/set/panda/2.jpg">
-        <img src="picture/set/panda/3.jpg">
-        <img src="picture/set/panda/4.jpg">
-        <img src="picture/set/panda/5.jpg">
-        <img src="picture/set/panda/6.jpg">
-    </div>
-    <hr>
-</div>
-<br><br>
 <div class="next">
     <a href="#"><</a>
     <a href="#" style="background: black; color: white;">1</a>
@@ -296,5 +291,7 @@
     </div>
     <hr>
 </div>
+
 </body>
+
 </html>

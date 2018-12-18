@@ -72,4 +72,32 @@ public class Admin_CommentController {
         model.addAttribute("content",content);
         return "admin/comment";
     }
+
+
+
+    //评论区
+    @RequestMapping(value = "commentPart")
+    public String commentPart(Model model){
+//        PageHelper.startPage(pn, 5);
+        ArrayList<Comment> comments;
+        comments = commentService.selectAll();
+
+//        PageInfo page = new PageInfo(comments,5);
+//        model.addAttribute("pageInfo", page);
+
+        model.addAttribute("comments",comments);
+
+        return "commentPart";
+    }
+
+    @RequestMapping(value = "commentPart/addComment")
+    public String addComment(HttpSession session,Model model, String content){
+        System.out.println(session.getAttribute("userid"));
+        int id = (int)session.getAttribute("userid");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(df.format(System.currentTimeMillis()));
+        Date time = new Date();
+        commentService.addComment(id,content,time);
+        return "redirect:/commentPart";
+    }
 }

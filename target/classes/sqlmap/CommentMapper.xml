@@ -35,6 +35,15 @@
   </if>
   </select>
 
+  <insert id="insert" parameterType="com.Emoji.entity.Comment" >
+    insert into comment (comment_id, comment_username, comment_content,
+      comment_time)
+    values (#{comment_id,jdbcType=INTEGER}, #{comment_username,jdbcType=VARCHAR}, #{comment_content,jdbcType=VARCHAR},
+      #{comment_time,jdbcType=TIMESTAMP})
+  </insert>
+
+
+
 
 
 
@@ -44,12 +53,6 @@
     from comment
     where comment_id = #{comment_id,jdbcType=INTEGER}
   </select>
-  <insert id="insert" parameterType="com.Emoji.entity.Comment" >
-    insert into comment (comment_id, comment_username, comment_content, 
-      comment_time)
-    values (#{comment_id,jdbcType=INTEGER}, #{comment_username,jdbcType=VARCHAR}, #{comment_content,jdbcType=VARCHAR}, 
-      #{comment_time,jdbcType=DATE})
-  </insert>
   <insert id="insertSelective" parameterType="com.Emoji.entity.Comment" >
     insert into comment
     <trim prefix="(" suffix=")" suffixOverrides="," >

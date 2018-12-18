@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public interface CommentMapper {
 
-    int insert(Comment record);
+
 
     int insertSelective(Comment record);
 
@@ -21,5 +21,6 @@ public interface CommentMapper {
     ArrayList<Comment> selectAll();
     int deleteByPrimaryKey(Integer comment_id);
     ArrayList<Comment> selectByCondition(Comment params);
+    int insert(Comment record);
 
 }

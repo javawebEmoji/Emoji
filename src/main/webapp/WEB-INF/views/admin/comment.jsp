@@ -210,7 +210,7 @@
                                 <td>${comment.comment_id}</td>
                                 <td>${comment.comment_username}</td>
                                 <td>${comment.comment_content}</td>
-                                <td>${comment.comment_time}</td>
+                                <td>${comment.getComment_timeToString()}</td>
                                 <td><button type="button" class="btn btn-danger btn-sm delete" id="${comment.comment_id}" >删除</button></td>
                             </tr>
                         </c:forEach>
