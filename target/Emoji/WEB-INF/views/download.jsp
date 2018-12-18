@@ -98,6 +98,12 @@
             <a href="contribute.html">表情投稿</a>
         </li>
         <li>
+            <a href="commentPart.html">评论区</a>
+        </li>
+        <li>
+            <a href="downloadPart.html">下载区</a>
+        </li>
+        <li>
             <a href="loginOff">退出登录</a>
         </li>
     </ul>

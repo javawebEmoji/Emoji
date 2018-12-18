@@ -24,18 +24,25 @@
 
 
   <select id="selectByCondition" resultMap="BaseResultMap" parameterType="com.Emoji.entity.Comment" >
-  SELECT * FROM comment
+  select *
+  from comment
   where
   <if test="comment_username != null">
-    comment_username like "%"#{comment_username}"%"
+    comment_username like concat('%',#{comment_username},'%')
   </if>
   <if test="comment_content != null">
-    AND comment_content like "%"#{comment_content}"%"
+    AND comment_content like concat('%',#{comment_content},'%')
   </if>
-  <!--<if test="startTime != null and endTime!=null">-->
-    <!--AND comment_time between DATE_FORMAT('${startTime}'', '%Y-%m-%d %H:%T:%s') and DATE_FORMAT('${endTime}'', '%Y-%m-%d %H:%T:%s')-->
-  <!--</if>-->
   </select>
+
+  <insert id="insert" parameterType="com.Emoji.entity.Comment" >
+    insert into comment (comment_id, comment_username, comment_content,
+      comment_time)
+    values (#{comment_id,jdbcType=INTEGER}, #{comment_username,jdbcType=VARCHAR}, #{comment_content,jdbcType=VARCHAR},
+      #{comment_time,jdbcType=TIMESTAMP})
+  </insert>
+
+
 
 
 
@@ -46,12 +53,6 @@
     from comment
     where comment_id = #{comment_id,jdbcType=INTEGER}
   </select>
-  <insert id="insert" parameterType="com.Emoji.entity.Comment" >
-    insert into comment (comment_id, comment_username, comment_content, 
-      comment_time)
-    values (#{comment_id,jdbcType=INTEGER}, #{comment_username,jdbcType=VARCHAR}, #{comment_content,jdbcType=VARCHAR}, 
-      #{comment_time,jdbcType=DATE})
-  </insert>
   <insert id="insertSelective" parameterType="com.Emoji.entity.Comment" >
     insert into comment
     <trim prefix="(" suffix=")" suffixOverrides="," >

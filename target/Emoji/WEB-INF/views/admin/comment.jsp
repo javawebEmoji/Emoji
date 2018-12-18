@@ -169,27 +169,27 @@
                     <%--&lt;%&ndash;<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">&ndash;%&gt;--%>
                     <%--<input class="btn btn-primary" type="submit" value="查询">--%>
                 <%--</form>--%>
-                <form class="form-inline" action="/admin/comment" method="post" style="margin-left:25px">
-                    <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username">
-                    <input class="form-control" type="text" placeholder="请输入评论内容" name="content">
-                    <%--<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">--%>
-                    <input class="btn btn-primary" type="submit" value="查询">
-                </form>
-                <div class="panel-body">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>序号</th>
-                            <th>评论人用户名</th>
-                            <th>评论内容</th>
-                            <th>评论时间</th>
-                            <th>删除</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <%--<%--%>
-                            <%--ArrayList<Comment> comments = (ArrayList<Comment>)session.getAttribute("comments");--%>
-                            <%--for(int i = 0; i < comments.size(); i ++){--%>
+                <form class="form-inline" action="/admin/comment" method="get" style="margin-left:25px">
+                        <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username">
+                        <input class="form-control" type="text" placeholder="请输入评论内容" name="content">
+                        <%--<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">--%>
+                        <input class="btn btn-primary" type="submit" value="查询">
+                        </form>
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>评论人用户名</th>
+                                    <th>评论内容</th>
+                                    <th>评论时间</th>
+                                    <th>删除</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <%--<%--%>
+                                <%--ArrayList<Comment> comments = (ArrayList<Comment>)session.getAttribute("comments");--%>
+                                <%--for(int i = 0; i < comments.size(); i ++){--%>
                                 <%--Comment comment = comments.get(i);--%>
                                 <%--Date date = comment.getComment_time();--%>
                                 <%--SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");--%>
@@ -210,7 +210,7 @@
                                 <td>${comment.comment_id}</td>
                                 <td>${comment.comment_username}</td>
                                 <td>${comment.comment_content}</td>
-                                <td>${comment.comment_time}</td>
+                                <td>${comment.getComment_timeToString()}</td>
                                 <td><button type="button" class="btn btn-danger btn-sm delete" id="${comment.comment_id}" >删除</button></td>
                             </tr>
                         </c:forEach>
@@ -224,22 +224,22 @@
             <!-- 分页信息结束 -->
             <!-- 分页条 -->
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="/admin/comment?pn=1">首页</a></li>
+                <li class="page-item"><a class="page-link" href="/admin/comment?pn=1<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>">首页</a></li>
                 <c:if test="${pageInfo.hasPreviousPage }">
                     <li class="page-item">
-                        <a  class="page-link" href="/admin/comment?pn=${pageInfo.pageNum-1}" aria-label="Previous">
+                        <a  class="page-link" href="/admin/comment?pn=${pageInfo.pageNum-1}<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
                 </c:if>
                 <c:forEach items="${pageInfo.navigatepageNums }" var="page_Num">
                     <c:if test="${page_Num == pageInfo.pageNum }"><li class="page-item active"><a class="page-link" href="#">${ page_Num}</a></li></c:if>
-                    <c:if test="${page_Num != pageInfo.pageNum }"><li class="page-item"><a class="page-link" href="/admin/comment?pn=${ page_Num}">${ page_Num}</a></li></c:if>
+                    <c:if test="${page_Num != pageInfo.pageNum }"><li class="page-item"><a class="page-link" href="/admin/comment?pn=${ page_Num}<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>">${ page_Num}</a></li></c:if>
                 </c:forEach>
                 <c:if test="${pageInfo.hasNextPage }">
-                    <li class="page-item"><a class="page-link" href="/admin/comment?pn=${pageInfo.pageNum+1}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                    <li class="page-item"><a class="page-link" href="/admin/comment?pn=${pageInfo.pageNum+1}<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                 </c:if>
-                <li><a class="page-link" href="/admin/comment?pn=${pageInfo.pages}">末页</a></li>
+                <li><a class="page-link" href="/admin/comment?pn=${pageInfo.pages}<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>">末页</a></li>
             </ul>
             <!-- 分页条结束 -->
         </div>

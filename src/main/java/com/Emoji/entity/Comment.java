@@ -1,5 +1,6 @@
 package com.Emoji.entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Comment {
@@ -43,6 +44,12 @@ public class Comment {
         this.comment_time = comment_time;
     }
 
+    //转换日期格式，用于页面显示日期
+    public String getComment_timeToString(){
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        return df.format(comment_time);
+    }
 
     @Override
     public String toString() {
