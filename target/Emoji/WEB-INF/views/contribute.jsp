@@ -9,10 +9,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/flash.js"></script>
     <script type="text/javascript" src="js/show.js"></script>
     <script type="text/javascript" src="js/drawer.js"></script>
+    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
     <link rel="stylesheet" href="css/top.css">
     <link rel="stylesheet" href="css/drawer.css">
     <link rel="stylesheet" href="css/tail.css">
@@ -32,8 +33,6 @@
         }
         .tishi p{
             font-size: 14px;
-
-
         }
         .text{
             margin-left: 15%;
@@ -53,20 +52,34 @@
             float: right;
 
         }
-        .picture{
-            width: 60%;
-            height: 60%;
+        .picture {
+            position: relative;
+            display: inline-block;
             margin-left: 15%;
-            border:1px solid #000;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
         }
-        #img_span img{
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-            margin-top: 20px;
-
+        .picture input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
         }
-        #submit{
+        .picture:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+        .sc{
             height: 50px;
             width: 250px;
             border-radius: 10px;
@@ -185,7 +198,7 @@
     </ul>
 </div>
 <div class="main">
-    <form enctype="multipart/form-data" action="#">
+    <form enctype="multipart/form-data">
         <h2>投稿</h2>
         <div class="tishi">
             <p>1.如果您是表情作者，欢迎投稿上来我们会免费为您首页置顶推广。同时也欢迎老铁们分享其他各类型斗图表情包。</p>
@@ -193,35 +206,32 @@
         </div>
         <div class="text">
             标题
-            <input type="text" id="title" name="title"><br><br><br>
-            投稿人
-            <input type="text" id="user" name="user"><br><br><br>
+            <input type="text" id="emoji_title" name="emoji_title"><br><br><br>
             表情描述
-            <input type="text" id="message" name="message"><br><br><br>
+            <input type="text" id="emoji_description" name="emoji_description"><br><br><br>
             标签
-            <input type="text" id="label" name="label"><br><br><br>
-            上传
-
+            <input type="text" id="emoji_label" name="emoji_label"><br><br><br>
         </div>
 
         <div class="picture">
-                <span id="img_span">
-                    <input id="file" class="filepath" onchange="changepic(this)" type="file"><br>
-                </span>
+            <input type="file" id="file" name="file" class="filepath" accept="image/*" onchange="changepic(this)" >上传图片
         </div>
-        <input type="submit" value="提交" id="submit">
+        <div id="img_span" style="margin-left: 15%">
+        </div>
+        <input class="sc" type="button" value="提交" id="sc" name="sc" onclick="uploadWJ()" >
     </form>
    </div>
 
 </body>
 <script>
     var i=0;
+    var filename ;
     function changepic(obj) {
-        document.getElementById("img_span").innerHTML+="<img src=\"\" id=\"show"+i+"\" width=\"200\" style=\"opacity: 0;\">";
+        filename = $("#file").val();
+        document.getElementById("img_span").innerHTML="<img src=\"\" id=\"show\" width=\"100\" style=\"opacity: 0;\"><br>"+filename;
         var newsrc=getObjectURL(obj.files[0]);
-        document.getElementById('show'+i).src=newsrc;
-        document.getElementById("show"+i).style.opacity=1;
-        i++;
+        document.getElementById('show').src=newsrc;
+        document.getElementById("show").style.opacity=1;
     }
     //建立一个可存取到该file的url
     function getObjectURL(file) {
@@ -236,12 +246,45 @@
         }
         return url ;
     }
-    function yanzheng(){
-        var title = document.getElementById("title");
-        var title = document.getElementById("title");
-        var title = document.getElementById("title");
-        var title = document.getElementById("title");
-        var title = document.getElementById("title");
+    function uploadWJ(){
+        debugger;
+        alert(filename.toString())
+        var isLogin = <%=(boolean) session.getAttribute("isLogin")%>
+        if(isLogin == false){
+            alert("请先登陆！")
+            return;
+        }
+        var emoji_title = $("#emoji_title").val()
+        var emoji_description = $("#emoji_description").val()
+        var emoji_label = $("#emoji_label").val()
+        // var filename = $("#file").val();
+        //执行上传文件操作的函数
+
+        $.ajaxFileUpload({
+            //处理文件上传操作的服务器端地址
+            url: '/contribute/upload',
+            enctype: "multipart/form-data",
+            secureuri: false,                       //是否启用安全提交,默认为false
+            fileElementId: 'file',                        //文件选择框的id属性
+            dataType: "json",                       //服务器返回的格式,可以是json或xml等
+            data: {
+                filename:filename,
+                emoji_title:emoji_title,
+                emoji_description:emoji_description,
+                emoji_label:emoji_label
+            },
+            success: function (data) {
+                debugger
+                if (data.success == 1) {
+                    alert(filename[j]+'上传成功')
+                }
+                else
+                    alert(data.message)
+            },
+            error: function (msg) {
+                alert(msg.responseText);
+            }
+        });
     }
 </script>
 </html>
