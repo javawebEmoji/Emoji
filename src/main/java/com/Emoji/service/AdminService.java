@@ -61,4 +61,10 @@ public class AdminService {
         return null;
     }
 
+
+    public ArrayList<Admin> selectAll() {
+        ArrayList<Admin> result;
+        result = adminMapper.selectAll();
+        return result;
+    }
 }

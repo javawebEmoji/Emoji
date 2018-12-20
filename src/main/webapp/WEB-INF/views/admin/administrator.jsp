@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lenovo
@@ -156,45 +157,35 @@
             <!-- 用户表格 -->
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="panel-title">用户管理</h3>
+                    <h3 class="panel-title">人员管理</h3>
                 </div>
                 <div class="panel-body">
                     <table class="table">
                         <thead>
                         <tr>
-                            <th>序号</th>
-                            <th>昵称</th>
-                            <th>用户名</th>
-                            <th>邮箱</th>
+                            <th>姓名</th>
+                            <th>账号</th>
+                            <th>密码</th>
+                            <th>手机</th>
+                            <th>修改人</th>
+                            <th>修改时间</th>
                             <th>编辑</th>
                             <th>删除</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Steve</td>
-                            <td>Jobs</td>
-                            <td>@steve</td>
-                            <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Simon</td>
-                            <td>Philips</td>
-                            <td>@simon</td>
-                            <td><button type="button" class="btn btn-success btn-sm">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Jane</td>
-                            <td>Doe</td>
-                            <td>@jane</td>
-                            <td><button type="button" class="btn btn-success btn-sm">编辑</button></td>
-                            <td><button type="button" class="btn btn-danger btn-sm">删除</button></td>
-                        </tr>
+                        <c:forEach items="${admins}" var="admin" varStatus="stat">
+                            <tr>
+                                <td>${admin.admin_name}</td>
+                                <td>${admin.admin_account}</td>
+                                <td>${admin.admin_password}</td>
+                                <td>${admin.admin_phone}</td>
+                                <td>${admin.modifyadmin}</td>
+                                <td>${admin.modifytime}</td>
+                                <td><button type="button" class="btn btn-danger btn-sm delete" id="${comment.comment_id}" >删除</button></td>
+                                <td><button type="button" class="btn btn-danger btn-sm delete" id="${comment.comment_id}" >删除</button></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
                     </table>
                 </div>
