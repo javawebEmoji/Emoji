@@ -2,6 +2,8 @@ package com.Emoji.dao;
 
 import com.Emoji.entity.Upload;
 
+import java.util.ArrayList;
+
 public interface UploadMapper {
     int deleteByPrimaryKey(Integer upload_id);
 
@@ -14,4 +16,5 @@ public interface UploadMapper {
     int updateByPrimaryKeySelective(Upload record);
 
     int updateByPrimaryKey(Upload record);
+    ArrayList<Upload> selectAll();
 }

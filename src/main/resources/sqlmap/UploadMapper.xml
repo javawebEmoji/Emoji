@@ -16,6 +16,10 @@
     upload_id, userid, username, filename, emoji_title, emoji_description, emoji_label, 
     savepath, upload_time
   </sql>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select *
+    from upload
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

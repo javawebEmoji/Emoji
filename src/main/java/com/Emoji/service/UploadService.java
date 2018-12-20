@@ -5,6 +5,8 @@ import com.Emoji.entity.Upload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 /**
  * Created by IntelliJ IDEA
  *
@@ -18,5 +20,8 @@ public class UploadService {
 
     public int insertSelective(Upload upload){
       return uploadMapper.insertSelective(upload);
+    }
+    public ArrayList<Upload> selectAll(){
+        return uploadMapper.selectAll();
     }
 }

@@ -84,7 +84,7 @@
             width: 250px;
             border-radius: 10px;
             margin-top: 30px;
-            margin-left: 300px;
+            margin-left: 30%;
             color:white;
             background:black;
         }
@@ -227,7 +227,7 @@
     var i=0;
     var filename ;
     function changepic(obj) {
-        filename = $("#file").val();
+        filename = getPath(obj);
         document.getElementById("img_span").innerHTML="<img src=\"\" id=\"show\" width=\"100\" style=\"opacity: 0;\"><br>"+filename;
         var newsrc=getObjectURL(obj.files[0]);
         document.getElementById('show').src=newsrc;
@@ -246,9 +246,26 @@
         }
         return url ;
     }
+    //附带不用修改浏览器安全配置的javascript代码，兼容ie， firefox全系列
+    function getPath(obj) {
+        //参数obj为input file对象
+        if(obj) {
+            if (window.navigator.userAgent.indexOf("MSIE")>=1) {
+                obj.select();
+                return document.selection.createRange().text;
+            }
+            else if(window.navigator.userAgent.indexOf("Firefox")>=1) {
+                if(obj.files) {
+                    return obj.files.item(0).getAsDataURL();
+                }
+                return obj.value;
+            }
+            return obj.value;
+        }
+    }
+
     function uploadWJ(){
         debugger;
-        alert(filename.toString())
         var isLogin = <%=(boolean) session.getAttribute("isLogin")%>
         if(isLogin == false){
             alert("请先登陆！")
@@ -276,7 +293,7 @@
             success: function (data) {
                 debugger
                 if (data.success == 1) {
-                    alert(filename[j]+'上传成功')
+                    alert(filename+'上传成功')
                 }
                 else
                     alert(data.message)
