@@ -24,4 +24,10 @@ public class UploadService {
     public ArrayList<Upload> selectAll(){
         return uploadMapper.selectAll();
     }
+    public int updateByPrimaryKeySelective(Upload upload){
+       return uploadMapper.updateByPrimaryKeySelective(upload);
+    }
+    public int deleteByPrimaryKey(Integer id){
+        return  uploadMapper.deleteByPrimaryKey(id);
+    }
 }

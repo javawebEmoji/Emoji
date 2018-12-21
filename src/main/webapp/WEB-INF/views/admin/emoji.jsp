@@ -1,7 +1,5 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="en">
 
 <head>
@@ -28,6 +26,30 @@
             background-color: #252c35;
             border-left-color: #00AAFF;
         }
+        .avatar {
+            display: block;.
+            width: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .avatar img {
+            margin: auto;
+            display: block;
+            border: 0;
+            width: 50%;
+            transform: scale(1);
+            transition: all 1s ease 0s;
+            -webkit-transform: scale(1);
+
+        }
+
+        /*.avatar:hover img {*/
+            /*transform: scale(0.8);*/
+            /*transition: all 1s ease 0s;*/
+            /*-webkit-transform: scale(0.8);*/
+
+        /*}*/
     </style>
 </head>
 <%--防止强制跳转--%>
@@ -174,10 +196,10 @@
                                 <td>${one.emoji_title}</td>
                                 <td>${one.emoji_description}</td>
                                 <td>${one.emoji_label}</td>
-                                <td><a href="/upload/${one.filename}" target="_parent">${one.filename}</a></td>
+                                <td><a data-toggle="modal" data-target="#showModal" onclick="path('${one.filename}')">${one.filename}</a></td>
                                 <td>${one.upload_time.toLocaleString()}</td>
-                                <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal" onclick="Values('${one.userid}','${one.username}','${one.phone}')">编辑</button></td>
-                                <td><button type="button" class="btn btn-danger btn-sm delete" id="${one.upload_id}">删除</button></td>
+                                <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal" onclick="Values('${one.upload_id}','${one.emoji_title}','${one.emoji_description}','${one.emoji_label}')">编辑</button></td>
+                                <td><button type="button" class="btn btn-danger btn-sm delete" id="${one.upload_id}&filename=${one.filename}">删除</button></td>
                             </tr>
                         </c:forEach>
 
@@ -187,26 +209,26 @@
             </div>
             <!-- 用户表格结束 -->
             <!-- 分页信息 -->
-            <div> 当前第：${userPage.pageNum}页，总共：${userPage.pages}页，总共：${userPage.total}条记录</div>
+            <div> 当前第：${emojiPage.pageNum}页，总共：${emojiPage.pages}页，总共：${emojiPage.total}条记录</div>
             <!-- 分页信息结束 -->
             <!-- 分页条 -->
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" href="/admin/emoji?pn=1">首页</a></li>
-                <c:if test="${userPage.hasPreviousPage }">
+                <c:if test="${emojiPage.hasPreviousPage }">
                     <li class="page-item">
-                        <a  class="page-link" href="/admin/emoji?pn=${userPage.pageNum-1}" aria-label="Previous">
+                        <a  class="page-link" href="/admin/emoji?pn=${emojiPage.pageNum-1}" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
                 </c:if>
-                <c:forEach items="${userPage.navigatepageNums}" var="page_Num">
+                <c:forEach items="${emojiPage.navigatepageNums}" var="page_Num">
                     <c:if test="${page_Num == pageInfo.pageNum }"><li class="page-item active"><a class="page-link" href="#">${ page_Num}</a></li></c:if>
                     <c:if test="${page_Num != pageInfo.pageNum }"><li class="page-item"><a class="page-link" href="/admin/emoji?pn=${ page_Num}">${ page_Num}</a></li></c:if>
                 </c:forEach>
-                <c:if test="${userPage.hasNextPage }">
-                    <li class="page-item"><a class="page-link" href="/admin/emoji?pn=${userPage.pageNum+1}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                <c:if test="${emojiPage.hasNextPage }">
+                    <li class="page-item"><a class="page-link" href="/admin/emoji?pn=${emojiPage.pageNum+1}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                 </c:if>
-                <li><a class="page-link" href="/admin/emoji?pn=${userPage.pages}">末页</a></li>
+                <li><a class="page-link" href="/admin/emoji?pn=${emojiPage.pages}">末页</a></li>
             </ul>
             <!-- 模态框 -->
             <div class="modal fade" id="editModal">
@@ -221,19 +243,45 @@
 
                         <!-- 模态框主体 -->
                         <div class="modal-body">
-                            <form action="changeInformation" method="post" id="AdminChange">
-                                <input type="hidden" id="userid" name="userid">
-                                用户名：<input type="text" id="username" name="username">
-                                手机号码:  <input type="text" id="phone" name="phone">
+                            <form action="ImgInformation" method="post" id="ImgChange">
+                                <input type="hidden" id="upload_id" name="upload_id">
+                                表情包标题：<input type="text" id="emoji_title" name="emoji_title"><br><br><br>
+                                表情包描述: <input type="text" id="emoji_description" name="emoji_description"><br><br><br>
+                                表情包标签: <input type="text" id="emoji_label" name="emoji_label">
                             </form>
                         </div>
-
                         <!-- 模态框底部 -->
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消更改
                             </button>
-                            <button type="button" class="btn btn-primary" onclick="AdminChangeInformation()">
+                            <button type="button" class="btn btn-primary" onclick="ImgChangeInformation()">
                                 提交更改
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 模态框结束 -->
+            </ul>
+            <!-- 模态框 -->
+            <div class="modal fade" id="showModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- 模态框头部 -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">查看图片</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- 模态框主体 -->
+                        <div class="modal-body">
+                           <a class="avatar"><img id="imgSrc" src=""></a>
+                        </div>
+
+                        <!-- 模态框底部 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">确定
                             </button>
                         </div>
 
@@ -257,20 +305,22 @@
 <script src="../vendor/chartist/js/chartist.min.js"></script>
 <script src="../js/klorofil-common.js"></script>
 <script>
-    function AdminChangeInformation(){
-        document.getElementById("AdminChange").submit();
+    function ImgChangeInformation(){
+        document.getElementById("ImgChange").submit();
     }
     <%--${"#editModal"}.modal("hide");--%>
-    function Values(userid,username,phone) {
-
-        document.getElementById("userid").value = userid;
-        document.getElementById("username").value = username;
-        document.getElementById("phone").value = phone;
-
+    function path(filename) {
+        document.getElementById("imgSrc").src = "/upload/"+filename;
+    }
+    function Values(id,title,description,label){
+        document.getElementById("upload_id").value = id;
+        document.getElementById("emoji_title").value = title;
+        document.getElementById("emoji_description").value =description;
+        document.getElementById("emoji_label").value = label;
     }
     $(function() {
         $(".delete").click(function(){
-            window.location = "/admin/user/delete?id=" + $(this).attr("id");
+            window.location = "emoji/delete?id=" + $(this).attr("id");
         })
         var data, options;
 
