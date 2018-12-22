@@ -28,14 +28,14 @@ CREATE TABLE `admin`  (
   `admin_password` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `admin_phone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `modifyadmin` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `modifytime` time(6) NULL DEFAULT NULL,
+  `modifytime` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`admin_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES ('root', 'root', 'root123', '12345678', NULL, NULL);
-INSERT INTO `admin` VALUES ('管理员', 'admin', '123456', '12345678', NULL, NULL);
+INSERT INTO `admin`(admin_name,admin_account,admin_password,admin_phone,modifyadmin,modifytime) VALUES ('root', 'root', 'root123', '12345678', NULL, NULL);
+INSERT INTO `admin`(admin_name,admin_account,admin_password,admin_phone,modifyadmin,modifytime) VALUES ('管理员', 'admin', '123456', '12345678', NULL, NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

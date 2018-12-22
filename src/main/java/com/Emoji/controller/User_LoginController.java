@@ -33,6 +33,7 @@ public class User_LoginController {
             HttpSession session = request.getSession();
             session.setAttribute("isLogin",true);//登录状态改为ture
             session.setAttribute("userid",result.getUserid());//把登录账户的id放到session里
+            session.setAttribute("username",result.getUsername());
             return "index";//登录成功，返回首页
         }
         else
@@ -43,6 +44,7 @@ public class User_LoginController {
     public String loginOff(HttpServletRequest request){
         HttpSession session = request.getSession();
         session.setAttribute("userid",null);
+        session.setAttribute("username",null);
         session.setAttribute("isLogin",false);
         return "index";
     }

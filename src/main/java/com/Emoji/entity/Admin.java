@@ -1,8 +1,11 @@
 package com.Emoji.entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Admin {
+    private String admin_id;
+
     private String admin_name;
 
     private String admin_account;
@@ -14,6 +17,14 @@ public class Admin {
     private String modifyadmin;
 
     private Date modifytime;
+
+    public String getAdmin_id() {
+        return admin_id;
+    }
+
+    public void setAdmin_id(String admin_id) {
+        this.admin_id = admin_id;
+    }
 
     public String getAdmin_name() {
         return admin_name;
@@ -61,5 +72,16 @@ public class Admin {
 
     public void setModifytime(Date modifytime) {
         this.modifytime = modifytime;
+    }
+
+    //转换日期格式，用于页面显示日期
+    public String getModifytimeToString(){
+        if(modifytime!=null){
+            System.out.println(modifytime);
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return df.format(modifytime);
+        }else{
+            return null;
+        }
     }
 }

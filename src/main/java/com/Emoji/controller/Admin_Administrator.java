@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 
 @Controller
@@ -31,5 +32,23 @@ public class Admin_Administrator {
 
 
         return "admin/administrator";
+    }
+
+    @RequestMapping("admin/administrator/add")
+    public String addAdministrator(Admin admin, HttpSession session){
+
+        int result = adminService.insert(admin,session);
+        if(result == 1){
+            return "redirect:/admin/administrator";
+        }else{
+            return "admin/administrator";
+        }
+
+    }
+
+    @RequestMapping(value = "admin/administrator/delete")
+    public String deleteCommentById(int id){
+        adminService.deleteByAdmin_id(id);
+        return "redirect:/admin/administrator";
     }
 }

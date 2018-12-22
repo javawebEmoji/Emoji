@@ -73,6 +73,11 @@
           <version>1.2</version>
       </dependency>
       <dependency>
+          <groupId>taglibs</groupId>
+          <artifactId>standard</artifactId>
+          <version>1.1.2</version>
+      </dependency>
+      <dependency>
           <groupId>javax.servlet.jsp</groupId>
           <artifactId>jsp-api</artifactId>
           <version>2.2.1-b03</version>
@@ -107,7 +112,17 @@
           <artifactId>pagehelper</artifactId>
           <version> 5.1.4</version>
       </dependency>
-
+      <!--上传-->
+      <dependency>
+          <groupId>commons-fileupload</groupId>
+          <artifactId>commons-fileupload</artifactId>
+          <version> 1.3.1</version>
+      </dependency>
+      <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version> 2.6</version>
+      </dependency>
       <!-- 代理 -->
       <dependency>
           <groupId>cglib</groupId>
@@ -117,8 +132,24 @@
       <!--json-->
       <dependency>
           <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-core</artifactId>
+          <version>2.9.8</version>
+      </dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-annotations</artifactId>
+          <version> 2.9.8</version>
+      </dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
           <artifactId>jackson-databind</artifactId>
-          <version>2.9.5</version>
+          <version> 2.9.8</version>
+      </dependency>
+      <dependency>
+          <groupId>net.sf.json-lib</groupId>
+          <artifactId>json-lib</artifactId>
+          <version> 2.4</version>
+          <classifier>jdk15</classifier>
       </dependency>
 
   </dependencies>

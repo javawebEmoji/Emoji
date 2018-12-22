@@ -21,13 +21,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="..//vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../vendor/linearicons/style.css">
     <link rel="stylesheet" href="../vendor/chartist/css/chartist-custom.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="../css/main.css">
     <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-    <link rel="stylesheet" href="../css/demo.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
@@ -170,50 +169,32 @@
                     <%--<input class="btn btn-primary" type="submit" value="查询">--%>
                 <%--</form>--%>
                 <form class="form-inline" action="/admin/comment" method="get" style="margin-left:25px">
-                        <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username">
-                        <input class="form-control" type="text" placeholder="请输入评论内容" name="content">
-                        <%--<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">--%>
-                        <input class="btn btn-primary" type="submit" value="查询">
-                        </form>
-                        <div class="panel-body">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>序号</th>
-                                    <th>评论人用户名</th>
-                                    <th>评论内容</th>
-                                    <th>评论时间</th>
-                                    <th>删除</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <%--<%--%>
-                                <%--ArrayList<Comment> comments = (ArrayList<Comment>)session.getAttribute("comments");--%>
-                                <%--for(int i = 0; i < comments.size(); i ++){--%>
-                                <%--Comment comment = comments.get(i);--%>
-                                <%--Date date = comment.getComment_time();--%>
-                                <%--SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");--%>
-                                <%--String comment_time = sdf.format(date);--%>
-                        <%--%>--%>
-                            <%--<tr>--%>
-                                <%--<td><%=comment.getComment_id()%></td>--%>
-                                <%--<td><%=comment.getComment_username()%></td>--%>
-                                <%--<td><%=comment.getComment_content()%></td>--%>
-                                <%--<td><%=comment_time%></td>--%>
-                                <%--<td><button type="button" class="btn btn-danger btn-sm delete" id="<%=comment.getComment_id()%>" >删除</button></td>--%>
-                            <%--</tr>--%>
-                        <%--<%--%>
-                            <%--}--%>
-                        <%--%>--%>
-                        <c:forEach items="${comments}" var="comment" varStatus="stat">
+                    <input class="form-control" type="text" placeholder="请输入评论人用户名" name="username">
+                    <input class="form-control" type="text" placeholder="请输入评论内容" name="content">
+                    <%--<input class="form-control" type="date" name="startTime"> ~ <input class="form-control" type="date" name="endTime">--%>
+                    <input class="btn btn-primary" type="submit" value="查询">
+                </form>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
                             <tr>
-                                <td>${comment.comment_id}</td>
-                                <td>${comment.comment_username}</td>
-                                <td>${comment.comment_content}</td>
-                                <td>${comment.getComment_timeToString()}</td>
-                                <td><button type="button" class="btn btn-danger btn-sm delete" id="${comment.comment_id}" >删除</button></td>
+                                <th>序号</th>
+                                <th>评论人用户名</th>
+                                <th>评论内容</th>
+                                <th>评论时间</th>
+                                <th>删除</th>
                             </tr>
-                        </c:forEach>
+                        </thead>
+                        <tbody>
+                            <c:forEach items="${comments}" var="comment" varStatus="stat">
+                                <tr>
+                                    <td>${comment.comment_id}</td>
+                                    <td>${comment.comment_username}</td>
+                                    <td>${comment.comment_content}</td>
+                                    <td>${comment.getComment_timeToString()}</td>
+                                    <td><button type="button" class="btn btn-danger btn-sm delete" id="${comment.comment_id}" >删除</button></td>
+                                </tr>
+                            </c:forEach>
                         </tbody>
                     </table>
                 </div>

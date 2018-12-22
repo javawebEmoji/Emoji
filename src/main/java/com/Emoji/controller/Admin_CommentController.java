@@ -94,8 +94,8 @@ public class Admin_CommentController {
     public String addComment(HttpSession session,Model model, String content){
         System.out.println(session.getAttribute("userid"));
         int id = (int)session.getAttribute("userid");
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println(df.format(System.currentTimeMillis()));
+//        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        System.out.println(df.format(System.currentTimeMillis()));
         Date time = new Date();
         commentService.addComment(id,content,time);
         return "redirect:/commentPart";

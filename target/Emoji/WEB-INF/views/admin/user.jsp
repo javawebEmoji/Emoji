@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="..//vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../vendor/linearicons/style.css">
     <link rel="stylesheet" href="../vendor/chartist/css/chartist-custom.css">
     <!-- MAIN CSS -->
@@ -177,7 +177,7 @@
                                 <td>${num.count}</td>
                                 <td>${one.username}</td>
                                 <td>${one.phone}</td>
-                                <td>${one.createtime}</td>
+                                <td>${one.createtime.toLocaleString()}</td>
                                 <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal" onclick="Values('${one.userid}','${one.username}','${one.phone}')">编辑</button></td>
                                 <td><button type="button" class="btn btn-danger btn-sm delete" id="${one.userid}">删除</button></td>
                             </tr>
