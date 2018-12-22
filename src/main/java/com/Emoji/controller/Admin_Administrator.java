@@ -48,8 +48,12 @@ public class Admin_Administrator {
 
     @RequestMapping(value = "admin/administrator/update")
     public String updateCommentById(Admin admin, HttpSession session){
-        System.out.println(admin.toString());
         adminService.updateByAdmin_id(admin,session);
-        return "redirect:/admin/administrator";
+        Admin modifyadmin = (Admin)session.getAttribute("isAdminLogin");
+        if(admin.getAdmin_id().equals(modifyadmin.getAdmin_id()) ){
+            return "redirect:/admin/adminInfo";
+        }else{
+            return "redirect:/admin/administrator";
+        }
     }
 }

@@ -33,11 +33,8 @@ public class AdminService {
                 /** 登录名存在  */
                 /** 判断密码 */
                 if (admin.getAdmin_password().equals(admin_password)) {
-                    /** 判断用户是否已经被激活了 */
-//                            if(user.getStatus() == 1){
                     /** 登录成功  */
                     /** 1.把登录成功的用户放入当前用户的session会话中  */
-//                                session.setAttribute(OaContants.USER_SESSION, user);
                     System.out.println("设置用户 ---------------->：" + admin);
                     result.put("status", 1);
                     result.put("tip", "登录成功");
@@ -69,13 +66,10 @@ public class AdminService {
     public int insert(Admin admin, HttpSession session) {
         //获取并设置修改人姓名
         Admin modifyadmin = (Admin)session.getAttribute("isAdminLogin");
-//        System.out.println("adminservice:"+modifyadmin);
-//        System.out.println("adminservice:"+modifyadmin.getAdmin_name());
         admin.setModifyadmin(modifyadmin.getAdmin_name());
 
         //获取并设置修改日期
         Date modifytime = new Date();
-//        System.out.println("adminservice:" + modifytime);
         admin.setModifytime(modifytime);
         return adminMapper.insert(admin);
     }
@@ -87,13 +81,13 @@ public class AdminService {
     public int updateByAdmin_id(Admin admin, HttpSession session){
         //获取并设置修改人姓名
         Admin modifyadmin = (Admin)session.getAttribute("isAdminLogin");
-        System.out.println("adminservice:"+modifyadmin);
-        System.out.println("adminservice:"+modifyadmin.getAdmin_name());
         admin.setModifyadmin(modifyadmin.getAdmin_name());
 
+        if(admin.getAdmin_id().equals(modifyadmin.getAdmin_id())){
+            session.setAttribute("isAdminLogin",admin);
+        }
         //获取并设置修改日期
         Date modifytime = new Date();
-        System.out.println("adminservice:" + modifytime);
         admin.setModifytime(modifytime);
         return adminMapper.updateByPrimaryKey(admin);
     }

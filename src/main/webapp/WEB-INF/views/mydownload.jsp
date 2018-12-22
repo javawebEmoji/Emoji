@@ -36,7 +36,6 @@
 
 <body>
 <div class="top">
-
     <ul>
         <li>
             <a href="index.html" style="background: url(/picture/logo.png) no-repeat 33%,5%;background-size: 100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
