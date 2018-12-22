@@ -68,6 +68,12 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="commentPart.html">评论区</a>
+        </li>
+        <li>
+            <a href="downloadPart.html">下载区</a>
+        </li>
         <li style="float: right">
             <a href="loginOff">退出登录</a>
         </li>
@@ -114,8 +120,8 @@
             <div id="sideNavBar">
                 <ul id="sideNavList">
                     <li><a href="personalCenter" target="_parent" >个人资料</a></li>
-                    <li><a href="collection" target="_parent">我的收藏</a></li>
-                    <li><a href="download" target="_parent">我的下载</a></li>
+                    <li><a href="mycomment" target="_parent">我的评论</a></li>
+                    <li><a href="mydownload" target="_parent">我的下载</a></li>
                     <li><a href="mycontribute" target="_parent">我的投稿</a></li>
                 </ul>
             </div><!-- sideNavBar 侧边导航栏 -->

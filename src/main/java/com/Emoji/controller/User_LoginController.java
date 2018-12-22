@@ -46,7 +46,7 @@ public class User_LoginController {
         session.setAttribute("userid",null);
         session.setAttribute("username",null);
         session.setAttribute("isLogin",false);
-        return "index";
+        return "redirect:/index";
     }
     @RequestMapping("/findkey")
     public String findkeyGet(){

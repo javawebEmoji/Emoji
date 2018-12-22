@@ -1,6 +1,11 @@
 package com.Emoji.controller;
 
+import com.Emoji.dao.CommentMapper;
+import com.Emoji.entity.Comment;
+import com.Emoji.entity.Upload;
 import com.Emoji.entity.User;
+import com.Emoji.service.CommentService;
+import com.Emoji.service.UploadService;
 import com.Emoji.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,11 +16,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 
 @Controller
 public class User_PersonalCenterController {
     @Autowired
     UserService userService;
+    @Autowired
+    CommentService commentService;
+    @Autowired
+    UploadService uploadService;
     @RequestMapping("/personalCenter")
     public String PersonalCenter(HttpServletRequest request,Model model){
         HttpSession session =request.getSession();
@@ -31,30 +41,60 @@ public class User_PersonalCenterController {
 
     }
     @RequestMapping("/mycontribute")
-    public String mycontribute(HttpServletRequest request){
+    public String mycontribute(HttpServletRequest request,Model model){
         HttpSession session =request.getSession();
         if (session.getAttribute("isLogin")!=null){
-            if ((boolean)session.getAttribute("isLogin")==true)
+            if ((boolean)session.getAttribute("isLogin")==true){
+                Integer userid = (Integer) session.getAttribute("userid");
+                String username =(String)session.getAttribute("username");
+                ArrayList<Upload> mycontributes = uploadService.selectMyContribute(userid,username);
+                if (mycontributes.size()==0)
+                    model.addAttribute("mycontributes",null);
+                else
+                    model.addAttribute("mycontributes",mycontributes);
+            }
                 return "mycontribute";
         }
         return "login";
 
     }
-    @RequestMapping("/collection")
-    public String collection(HttpServletRequest request){
+    @RequestMapping("/mycomment")
+    public String mycomment(HttpServletRequest request,Model model){
         HttpSession session =request.getSession();
         if (session.getAttribute("isLogin")!=null){
-            if ((boolean)session.getAttribute("isLogin")==true)
-                return "collection";
+            if ((boolean)session.getAttribute("isLogin")==true){
+                String username =(String) session.getAttribute("username");
+                ArrayList<Comment> comments = commentService.selectMyComment(username);
+                if (comments.size()==0)
+                    model.addAttribute("mycomments",null);
+                else
+                    model.addAttribute("mycomments",comments);
+                return "mycomment";
+            }
         }
         return "login";
-
-    }    @RequestMapping("/download")
+    }
+    @RequestMapping("/mycomment/delete")
+    public  String deleteComment(Integer comment_id, HttpServletRequest request){
+        HttpSession session =request.getSession();
+        if (session.getAttribute("isLogin")!=null){
+            if ((boolean)session.getAttribute("isLogin")==true){
+                Comment comment = commentService.selectByPrimaryKey(comment_id);
+                if (comment.getComment_username().equals((String) session.getAttribute("username"))){
+                    //账户名验证
+                    commentService.deleteByPrimaryKey(comment_id);
+                }
+            }
+                return "redirect:/mycomment";
+        }
+        return "login";
+    }
+    @RequestMapping("/mydownload")
     public String download(HttpServletRequest request){
         HttpSession session =request.getSession();
         if (session.getAttribute("isLogin")!=null){
             if ((boolean)session.getAttribute("isLogin")==true)
-                return "download";
+                return "mydownload";
         }
         return "login";
 

@@ -17,4 +17,5 @@ public interface UploadMapper {
 
     int updateByPrimaryKey(Upload record);
     ArrayList<Upload> selectAll();
+    ArrayList<Upload> selectMyContribute(Upload record);
 }

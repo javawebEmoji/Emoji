@@ -30,4 +30,10 @@ public class UploadService {
     public int deleteByPrimaryKey(Integer id){
         return  uploadMapper.deleteByPrimaryKey(id);
     }
+    public ArrayList<Upload> selectMyContribute(Integer userid,String username){
+        Upload record = new Upload();
+        record.setUserid(userid);
+        record.setUsername(username);
+        return uploadMapper.selectMyContribute(record);
+    }
 }

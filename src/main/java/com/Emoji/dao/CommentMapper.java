@@ -16,8 +16,7 @@ public interface CommentMapper {
     int updateByPrimaryKeySelective(Comment record);
 
     int updateByPrimaryKey(Comment record);
-
-
+    ArrayList<Comment> selectMyComment(String comment_username);
     ArrayList<Comment> selectAll();
     int deleteByPrimaryKey(Integer comment_id);
     ArrayList<Comment> selectByCondition(Comment params);

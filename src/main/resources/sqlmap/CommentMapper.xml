@@ -21,8 +21,11 @@
     delete from comment
     where comment_id = #{comment_id,jdbcType=INTEGER}
   </delete>
-
-
+  <select id="selectMyComment" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select *
+    from comment
+    where  comment_username = #{comment_username}
+  </select>
   <select id="selectByCondition" resultMap="BaseResultMap" parameterType="com.Emoji.entity.Comment" >
   select *
   from comment

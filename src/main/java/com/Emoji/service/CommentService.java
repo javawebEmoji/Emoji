@@ -24,7 +24,12 @@ public class CommentService {
         result = commentMapper.selectAll();
         return result;
     }
-
+    public ArrayList selectMyComment(String comment_username){
+        return commentMapper.selectMyComment(comment_username);
+    }
+    public Comment selectByPrimaryKey(Integer comment_id){
+        return commentMapper.selectByPrimaryKey(comment_id);
+    }
     public int deleteByPrimaryKey(Integer id){
         return commentMapper.deleteByPrimaryKey(id);
     }

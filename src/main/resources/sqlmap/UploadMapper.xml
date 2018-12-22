@@ -26,6 +26,11 @@
     from upload
     where upload_id = #{upload_id,jdbcType=INTEGER}
   </select>
+  <select id="selectMyContribute" resultMap="BaseResultMap" parameterType="com.Emoji.entity.Upload">
+    select *
+    from upload
+    where userid = #{userid} and username = #{username}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from upload
     where upload_id = #{upload_id,jdbcType=INTEGER}

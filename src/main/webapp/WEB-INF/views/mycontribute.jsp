@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -115,8 +117,8 @@
             <div id="sideNavBar">
                 <ul id="sideNavList">
                     <li><a href="personalCenter" target="_parent" >个人资料</a></li>
-                    <li><a href="collection" target="_parent">我的收藏</a></li>
-                    <li><a href="download" target="_parent">我的下载</a></li>
+                    <li><a href="mycomment" target="_parent">我的评论</a></li>
+                    <li><a href="mydownload" target="_parent">我的下载</a></li>
                     <li><a href="mycontribute" target="_parent">我的投稿</a></li>
                 </ul>
             </div><!-- sideNavBar 侧边导航栏 -->
@@ -125,12 +127,16 @@
         <div id="content">
             <br>我的投稿
             <div class="photo">
-                <img src="picture/set/cooker/1.jpg">
-                <img src="picture/set/cooker/2.jpg">
-                <img src="picture/set/cooker/3.jpg">
-                <img src="picture/set/cooker/4.jpg">
-                <img src="picture/set/cooker/5.jpg">
-                <img src="picture/set/cooker/6.jpg">
+
+                <c:if test="${mycontributes ==null}">
+                <a href="/contribute">您还没投过稿,点击前往投稿</a>
+                </c:if>
+                <c:if test="${mycontributes !=null}">
+                    <c:forEach items="${mycontributes}" var="img">
+                        <img src="upload/${img.filename}">
+                    </c:forEach>
+
+                </c:if>
             </div>
         </div><!-- content 内容 -->
     </div><!-- main 主要部分 -->

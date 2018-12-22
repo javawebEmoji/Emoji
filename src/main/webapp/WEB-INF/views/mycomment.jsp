@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -20,17 +22,33 @@
     <link rel="stylesheet" href="css/pc.css">
     <title>个人收藏</title>
     <style>
-        .photo {
-            overflow: hidden;
-            height: auto;
-            width: auto;
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
         }
-        .photo img {
-            overflow: hidden;
-            height:160px;
-            width: 160px;
-            margin: 2px;
-
+        table td, table th
+        {
+            border: 1px solid #BDBDBD;
+            color: #666;
+            height: 30px;
+        }
+        table thead th
+        {
+            background-color: #F0F0F0;
+            width: 100px;
+        }
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+        .comments{
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -69,6 +87,12 @@
                     <a href="#contact">意见反馈</a>
                 </li>
             </ul>
+        </li>
+        <li>
+            <a href="commentPart.html">评论区</a>
+        </li>
+        <li>
+            <a href="downloadPart.html">下载区</a>
         </li>
         <li style="float: right">
             <a href="loginOff">退出登录</a>
@@ -110,22 +134,40 @@
             <div id="sideNavBar">
                 <ul id="sideNavList">
                     <li><a href="personalCenter" target="_parent" >个人资料</a></li>
-                    <li><a href="collection" target="_parent">我的收藏</a></li>
-                    <li><a href="download" target="_parent">我的下载</a></li>
+                    <li><a href="mycomment" target="_parent">我的评论</a></li>
+                    <li><a href="mydownload" target="_parent">我的下载</a></li>
                     <li><a href="mycontribute" target="_parent">我的投稿</a></li>
                 </ul>
             </div><!-- sideNavBar 侧边导航栏 -->
         </div><!-- sideBar 侧边栏 -->
 
         <div id="content">
-            <br>我的收藏
-            <div class="photo">
-                <img src="/picture/set/dragon/1.gif">
-                <img src="/picture/set/dragon/2.gif">
-                <img src="/picture/set/dragon/3.gif">
-                <img src="/picture/set/dragon/4.gif">
-                <img src="/picture/set/dragon/5.gif">
-                <img src="/picture/set/dragon/6.gif">
+            <div class="comments">
+                <c:if test="${mycomments ==null}">
+                    <a href="commentPart">您还没发表过评论,点击前往发表评论</a>
+                </c:if>
+                <c:if test="${mycomments !=null}">
+                <table width="90%" class="table">
+                    <caption>
+                        <h2>我的评论</h2>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>评论内容 </th>
+                        <th>评论时间</th>
+                        <th>管理</th>
+                    </tr>
+                    </thead>
+                    <c:forEach items="${mycomments}" var="comment" varStatus="num">
+                    <tr>
+                        <td>${num.count}</td>
+                        <td>${comment.comment_content}</td>
+                        <td>${comment.comment_time.toLocaleString()}</td>
+                        <td><a href="/mycomment/delete?comment_id=${comment.comment_id}">删除</a></td>
+                    </tr>
+                    </c:forEach>
+                </c:if>
             </div>
         </div><!-- content 内容 -->
     </div><!-- main 主要部分 -->
