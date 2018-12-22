@@ -38,7 +38,13 @@
     <script>
         function deleteAdmin(id){
             window.location = "/admin/administrator/delete?id=" + id;
-            console.log($(this).attr("admin_id"));
+        }
+        function updateAdmin(id,name,account,password,phone){
+            document.getElementById("update_admin_id").value = id;
+            document.getElementById("update_admin_name").value = name;
+            document.getElementById("update_admin_account").value = account;
+            document.getElementById("update_admin_password").value = password;
+            document.getElementById("update_admin_phone").value = phone;
         }
     </script>
 </head>
@@ -193,7 +199,7 @@
                                 <td>${admin.admin_phone}</td>
                                 <td>${admin.modifyadmin}</td>
                                 <td>${admin.getModifytimeToString()}</td>
-                                <td><button type="button" class="btn btn-success btn-sm edit" data-toggle="modal" data-target="#editModal">编辑</button></td>
+                                <td><button type="button" class="btn btn-success btn-sm edit" data-toggle="modal" data-target="#editModal" onclick="updateAdmin('${admin.admin_id}','${admin.admin_name}','${admin.admin_account}','${admin.admin_password}','${admin.admin_phone}')">编辑</button></td>
                                 <td><button type="button" class="btn btn-danger btn-sm delete" onclick="deleteAdmin(${admin.admin_id})">删除</button></td>
                             </tr>
                         </c:forEach>
@@ -249,23 +255,40 @@
             <div class="modal fade" id="editModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
+                        <form action="administrator/update">
+                            <!-- 模态框头部 -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">修改信息</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
 
-                        <!-- 模态框头部 -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">模态框头部</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
+                            <!-- 模态框主体 -->
+                            <div class="modal-body">
+                                <input type="hidden" id="update_admin_id" name="admin_id" value="">
+                                <div class="form-group">
+                                    <label for="update_admin_name">姓名:</label>
+                                    <input type="text" class="form-control" id="update_admin_name" name="admin_name" placeholder="请输入姓名">
+                                </div>
+                                <div class="form-group">
+                                    <label for="update_admin_account">账号:</label>
+                                    <input type="text" class="form-control" id="update_admin_account" name="admin_account" placeholder="请输入账号">
+                                </div>
+                                <div class="form-group">
+                                    <label for="update_admin_password">密码:</label>
+                                    <input type="text" class="form-control" id="update_admin_password" name="admin_password" placeholder="请输入密码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="update_admin_phone">手机号:</label>
+                                    <input type="text" class="form-control" id="update_admin_phone"  name="admin_phone" placeholder="请输入手机号">
+                                </div>
+                            </div>
 
-                        <!-- 模态框主体 -->
-                        <div class="modal-body">
-                            模态框内容..
-                        </div>
-
-                        <!-- 模态框底部 -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                        </div>
-
+                            <!-- 模态框底部 -->
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

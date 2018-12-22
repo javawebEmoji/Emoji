@@ -84,4 +84,17 @@ public class Admin {
             return null;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "admin_id='" + admin_id + '\'' +
+                ", admin_name='" + admin_name + '\'' +
+                ", admin_account='" + admin_account + '\'' +
+                ", admin_password='" + admin_password + '\'' +
+                ", admin_phone='" + admin_phone + '\'' +
+                ", modifyadmin='" + modifyadmin + '\'' +
+                ", modifytime=" + modifytime +
+                '}';
+    }
 }

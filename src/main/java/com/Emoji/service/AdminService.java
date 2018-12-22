@@ -75,12 +75,26 @@ public class AdminService {
 
         //获取并设置修改日期
         Date modifytime = new Date();
-        System.out.println("adminservice:" + modifytime);
+//        System.out.println("adminservice:" + modifytime);
         admin.setModifytime(modifytime);
         return adminMapper.insert(admin);
     }
 
     public int deleteByAdmin_id(Integer id){
         return adminMapper.deleteByPrimaryKey(id);
+    }
+
+    public int updateByAdmin_id(Admin admin, HttpSession session){
+        //获取并设置修改人姓名
+        Admin modifyadmin = (Admin)session.getAttribute("isAdminLogin");
+        System.out.println("adminservice:"+modifyadmin);
+        System.out.println("adminservice:"+modifyadmin.getAdmin_name());
+        admin.setModifyadmin(modifyadmin.getAdmin_name());
+
+        //获取并设置修改日期
+        Date modifytime = new Date();
+        System.out.println("adminservice:" + modifytime);
+        admin.setModifytime(modifytime);
+        return adminMapper.updateByPrimaryKey(admin);
     }
 }

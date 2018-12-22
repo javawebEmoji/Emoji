@@ -11,7 +11,6 @@ public interface AdminMapper {
 
     int updateByPrimaryKeySelective(Admin record);
 
-    int updateByPrimaryKey(Admin record);
 
     //管理员登陆
     Admin getUserByAdmin_account(String admin_account);
@@ -19,4 +18,5 @@ public interface AdminMapper {
     ArrayList<Admin> selectAll();
     int insert(Admin admin);
     int deleteByPrimaryKey(int admin_id);
+    int updateByPrimaryKey(Admin record);
 }

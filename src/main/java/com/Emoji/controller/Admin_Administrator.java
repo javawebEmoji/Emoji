@@ -36,19 +36,20 @@ public class Admin_Administrator {
 
     @RequestMapping("admin/administrator/add")
     public String addAdministrator(Admin admin, HttpSession session){
-
-        int result = adminService.insert(admin,session);
-        if(result == 1){
-            return "redirect:/admin/administrator";
-        }else{
-            return "admin/administrator";
-        }
-
+        adminService.insert(admin,session);
+        return "redirect:/admin/administrator";
     }
 
     @RequestMapping(value = "admin/administrator/delete")
     public String deleteCommentById(int id){
         adminService.deleteByAdmin_id(id);
+        return "redirect:/admin/administrator";
+    }
+
+    @RequestMapping(value = "admin/administrator/update")
+    public String updateCommentById(Admin admin, HttpSession session){
+        System.out.println(admin.toString());
+        adminService.updateByAdmin_id(admin,session);
         return "redirect:/admin/administrator";
     }
 }
