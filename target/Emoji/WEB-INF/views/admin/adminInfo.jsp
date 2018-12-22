@@ -29,16 +29,7 @@
     <!-- ICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="../picture/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="../picture/favicon.png">
-    <style>
-         .sidebar .nav > li > a.administrator{
-             background-color: #252c35;
-             border-left-color: #00AAFF;
-         }
-    </style>
     <script>
-        function deleteAdmin(id){
-            window.location = "/admin/administrator/delete?id=" + id;
-        }
         function updateAdmin(id,name,account,password,phone){
             document.getElementById("update_admin_id").value = id;
             document.getElementById("update_admin_name").value = name;
@@ -59,91 +50,43 @@
     <div class="main">
         <!-- MAIN CONTENT -->
         <div class="main-content">
-            <!-- 用户表格 -->
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="panel-title">人员管理</h3>
-                </div>
-                <div>
-                    <button style="margin-left:30px" type="button" class="btn btn-primary btn-sm " id="add"  data-toggle="modal" data-target="#addModal">添加</button>
+                    <h3 class="panel-title">你好，${isAdminLogin.getAdmin_name()}</h3>
                 </div>
                 <div class="panel-body">
                     <table class="table">
                         <thead>
                         <tr>
-                            <th>序号</th>
-                            <th>姓名</th>
-                            <th>账号</th>
-                            <th>密码</th>
-                            <th>手机</th>
-                            <th>修改人</th>
-                            <th>修改时间</th>
-                            <th>编辑</th>
-                            <th>删除</th>
+                            <th colspan="2">个人信息</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${admins}" var="admin" varStatus="stat">
                             <tr>
-                                <td>${admin.admin_id}</td>
-                                <td>${admin.admin_name}</td>
-                                <td>${admin.admin_account}</td>
-                                <td>${admin.admin_password}</td>
-                                <td>${admin.admin_phone}</td>
-                                <td>${admin.modifyadmin}</td>
-                                <td>${admin.getModifytimeToString()}</td>
-                                <td><button type="button" class="btn btn-success btn-sm edit" data-toggle="modal" data-target="#editModal" onclick="updateAdmin('${admin.admin_id}','${admin.admin_name}','${admin.admin_account}','${admin.admin_password}','${admin.admin_phone}')">编辑</button></td>
-                                <td><button type="button" class="btn btn-danger btn-sm delete" onclick="deleteAdmin(${admin.admin_id})">删除</button></td>
+                                <td>序号</td>
+                                <td>${isAdminLogin.getAdmin_id()}</td>
                             </tr>
-                        </c:forEach>
+                            <tr>
+                                <td>姓名</td>
+                                <td>${isAdminLogin.getAdmin_name()}</td>
+                            </tr>
+                            <tr>
+                                <td>账号</td>
+                                <td>${isAdminLogin.getAdmin_account()}</td>
+                            </tr>
+                            <tr>
+                                <td>密码</td>
+                                <td>${isAdminLogin.getAdmin_password()}</td>
+                            </tr>
+                            <tr>
+                                <td>手机</td>
+                                <td>${isAdminLogin.getAdmin_phone()}</td>
+                            </tr>
                         </tbody>
                     </table>
+                    <button style="margin-left: 20px;" type="button" class="btn btn-success btn-sm edit" data-toggle="modal" data-target="#editModal" onclick="updateAdmin('${isAdminLogin.getAdmin_id()}','${isAdminLogin.getAdmin_name()}','${isAdminLogin.getAdmin_account()}','${isAdminLogin.getAdmin_password()}','${isAdminLogin.getAdmin_phone()}')">编辑</button>
                 </div>
             </div>
-            <!-- 用户表格结束 -->
-
-            <!-- 添加模态框 -->
-            <div class="modal fade" id="addModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form action="administrator/add">
-                            <!-- 模态框头部 -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">添加人员</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <!-- 模态框主体 -->
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="admin_name">姓名:</label>
-                                    <input type="text" class="form-control" id="admin_name" name="admin_name" placeholder="请输入姓名">
-                                </div>
-                                <div class="form-group">
-                                    <label for="admin_account">账号:</label>
-                                    <input type="text" class="form-control" id="admin_account" name="admin_account" placeholder="请输入账号">
-                                </div>
-                                <div class="form-group">
-                                    <label for="admin_password">密码:</label>
-                                    <input type="text" class="form-control" id="admin_password" name="admin_password" placeholder="请输入密码">
-                                </div>
-                                <div class="form-group">
-                                    <label for="admin_phone">手机号:</label>
-                                    <input type="text" class="form-control" id="admin_phone"  name="admin_phone" placeholder="请输入手机号">
-                                </div>
-                            </div>
-
-                            <!-- 模态框底部 -->
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">提交</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- 添加模态框结束 -->
-
             <!-- 编辑模态框 -->
             <div class="modal fade" id="editModal">
                 <div class="modal-dialog">
@@ -186,29 +129,6 @@
                 </div>
             </div>
             <!-- 编辑模态框结束 -->
-            <!-- 分页信息 -->
-            <div> 当前第：${pageInfo.pageNum}页，总共：${pageInfo.pages}页，总共：${pageInfo.total}条记录</div>
-            <!-- 分页信息结束 -->
-            <!-- 分页条 -->
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="/admin/administrator?pn=1<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>">首页</a></li>
-                <c:if test="${pageInfo.hasPreviousPage }">
-                    <li class="page-item">
-                        <a  class="page-link" href="/admin/administrator?pn=${pageInfo.pageNum-1}<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                </c:if>
-                <c:forEach items="${pageInfo.navigatepageNums }" var="page_Num">
-                    <c:if test="${page_Num == pageInfo.pageNum }"><li class="page-item active"><a class="page-link" href="#">${ page_Num}</a></li></c:if>
-                    <c:if test="${page_Num != pageInfo.pageNum }"><li class="page-item"><a class="page-link" href="/admin/administrator?pn=${ page_Num}<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>">${ page_Num}</a></li></c:if>
-                </c:forEach>
-                <c:if test="${pageInfo.hasNextPage }">
-                    <li class="page-item"><a class="page-link" href="/admin/administrator?pn=${pageInfo.pageNum+1}<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                </c:if>
-                <li><a class="page-link" href="/admin/administrator?pn=${pageInfo.pages}<c:if test='${username != null}' >&username=${username}</c:if><c:if test='${content != null}' >&content=${content}</c:if>">末页</a></li>
-            </ul>
-            <!-- 分页条结束 -->
         </div>
     </div>
     <!-- END MAIN -->

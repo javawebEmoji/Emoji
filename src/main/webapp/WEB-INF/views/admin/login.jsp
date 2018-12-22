@@ -171,7 +171,7 @@
                         console.log(data);
                         if(data.status == 1){
                             /** 跳转到主界面上去  */
-                            window.location = "home";
+                            window.location = "user";
                         }else{
                             $("#vimg").trigger("click");
                             $("#tip").css("background-color","#f8d7da")

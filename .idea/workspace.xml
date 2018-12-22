@@ -7,46 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44be4f5c-f972-46f9-875d-a585af554ea3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_DownloadPartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Emoji_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Emoji_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_AdminInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/adminInfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Emoji.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Emoji.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_EmojiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_EmojiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/dao/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/dao/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Emoji/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Emoji/service/UploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sqlmap/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sqlmap/AdminMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/administrator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/administrator.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/emoji.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/emoji.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/downloadPart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/downloadPart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_Administrator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_EmojiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_EmojiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/dao/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/dao/AdminMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/entity/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/entity/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/headNavigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/headNavigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/leftNavigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/leftNavigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/download.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/download.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/controller/Admin_LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/service/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/service/UploadService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/com/Emoji/service/UploadService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/sqlmap/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/classes/sqlmap/AdminMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/administrator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/administrator.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/emoji.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/emoji.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/downloadPart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/downloadPart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_Administrator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_EmojiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_EmojiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/dao/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Emoji/dao/AdminMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/entity/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Emoji/entity/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Emoji/service/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/service/UploadService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Emoji/service/UploadService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sqlmap/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sqlmap/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/headNavigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/headNavigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/leftNavigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/leftNavigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/admin/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/download.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Emoji/WEB-INF/views/download.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_Administrator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Emoji/controller/Admin_LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Emoji/service/AdminService.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,14 +45,16 @@
     <session id="-1672411028">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.47" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.65" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="11" />
-          <entry key="jsp" value="9" />
+          <entry key="java" value="25" />
+          <entry key="jsp" value="17" />
           <entry key="properties" value="1" />
           <entry key="sql" value="1" />
           <entry key="xml" value="2" />
@@ -74,8 +62,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="11" />
-          <entry key="JSP" value="9" />
+          <entry key="JAVA" value="25" />
+          <entry key="JSP" value="17" />
           <entry key="Properties" value="1" />
           <entry key="SQL" value="1" />
           <entry key="XML" value="2" />
@@ -83,16 +71,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="160" />
-          <entry key="jsp" value="565" />
+          <entry key="java" value="358" />
+          <entry key="jsp" value="795" />
           <entry key="properties" value="6" />
           <entry key="xml" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="160" />
-          <entry key="JSP" value="565" />
+          <entry key="JAVA" value="358" />
+          <entry key="JSP" value="795" />
           <entry key="Properties" value="6" />
           <entry key="SQL" value="2" />
           <entry key="XML" value="17" />
@@ -101,71 +89,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/downloadPart.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/commentPart.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="56" column="26" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="56" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="11" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_DownloadPartController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#269#270#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/download.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -179,12 +108,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/Emoji/dao/AdminMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlmap/AdminMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Emoji/service/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Emoji/entity/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_Administrator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/administrator.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_DownloadPartController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/downloadPart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/emoji.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/leftNavigation.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/download.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/administrator.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_AdminInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/headNavigation.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/adminInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Emoji/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_Administrator.java" />
       </list>
     </option>
   </component>
@@ -201,7 +138,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="30" />
     <option name="width" value="1305" />
     <option name="height" value="788" />
@@ -211,7 +148,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -363,13 +300,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545447472760" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545469725402" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -468,49 +405,49 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545442306327</updated>
-      <workItem from="1545442326171" duration="5062000" />
+      <workItem from="1545442326171" duration="5127000" />
+      <workItem from="1545461460616" duration="5261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5062000" />
+    <option name="totallyTimeSpent" value="10388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32840723" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32840723" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32840723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32840723" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32840723" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/dao/AdminMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -555,27 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_EmojiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/emoji.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1062">
-          <caret line="252" column="38" lean-forward="true" selection-start-line="252" selection-start-column="38" selection-end-line="252" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -583,55 +492,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/administrator.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="208" column="18" lean-forward="true" selection-start-line="208" selection-start-column="18" selection-end-line="208" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/entity/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_Administrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contribute.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/download.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/downloadPart.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
+        <state relative-caret-position="302">
+          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/commentPart.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="1064">
+          <caret line="56" column="26" selection-start-line="49" selection-start-column="12" selection-end-line="56" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="11" selection-end-column="5" />
+          <caret line="11" column="5" selection-start-line="7" selection-start-column="3" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/checkLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="173" column="51" selection-start-line="173" selection-start-column="51" selection-end-line="173" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/emoji.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1102">
+          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/download.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_DownloadPartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state>
+          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#269#270#0" expanded="true" />
@@ -640,17 +568,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/commentPart.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/User_LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="56" column="26" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="56" selection-end-column="26" />
+        <state relative-caret-position="931">
+          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/downloadPart.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        <state relative-caret-position="95">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_EmojiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_LogoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/entity/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_Administrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="52" column="67" lean-forward="true" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_AdminInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Emoji/controller/Admin_LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="45" column="26" lean-forward="true" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/administrator.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="91" column="61" lean-forward="true" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/adminInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-553">
+          <caret line="87" column="22" lean-forward="true" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/headNavigation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/leftNavigation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
         </state>
       </provider>
     </entry>
